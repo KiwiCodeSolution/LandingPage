@@ -3,6 +3,6 @@ import { resolve } from 'path';
 
 export default {
   plugins: [handlebars({
-      partialDirectory: resolve(__dirname, 'partials'),
+      partialDirectory: resolve(__dirname, 'src/partials'),
     })],
 };
