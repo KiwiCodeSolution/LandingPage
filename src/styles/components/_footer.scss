@@ -1,3 +1,92 @@
 .footer {
-  background-color: burlywood;
+  height: 440px;
+  width: 100%;
+  padding-top: 80px;
+  padding-left: 100px;
+
+  background: linear-gradient(162deg, rgba(12, 87, 40, 1) 0%, rgba(1, 24, 31, 1) 48%, rgba(24, 88, 102, 1) 100%);
+
+  &__menu {
+    display: flex;
+
+    &--logo {
+      width: 172px;
+      margin-bottom: 40px;
+    }
+
+    &--social {
+      display: flex;
+
+      &-logo {
+        margin-right: 135px;
+      }
+
+      &-item {
+        width: 34px;
+        height: 34px;
+        margin-right: 24px;
+        border: 1px solid $green;
+        border-radius: 50%;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--services {
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 500;
+      width: 245px;
+
+      &-item {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--contacts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-row-gap: 16px;
+      grid-column-gap: 20px;
+
+      &-title {
+        font-size: 24px;
+        font-weight: 1.42;
+        margin-bottom: 8px;
+      }
+
+      &-phone {
+        a {
+          margin-bottom: 7px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-adress {
+        width: 220px;
+      }
+    }
+  }
+}
+
+.services {
+  margin-right: 90px;
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.6;
 }
