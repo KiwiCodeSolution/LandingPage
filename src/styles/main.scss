@@ -1,4 +1,10 @@
-@import './components/header';
-@import './components/footer';
+@import "./components/header";
+@import "./components/footer";
 
 $main-color: #979797;
+
+// UTILS
+
+@import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./utils/global";
