@@ -1,17 +1,8 @@
-.header {
-  background-color: aquamarine;
-}
-
-.footer {
-  background-color: burlywood;
-}
-
 body {
   box-sizing: border-box;
   font-family: "Cabin", normal;
   font-size: 16px;
   color: #ffffff;
-  background-color: #c0c0c0;
 }
 
 p,
@@ -66,8 +57,108 @@ ul {
   list-style: none;
 }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+.header {
+  background-color: aquamarine;
+}
+
+.footer {
+  height: 440px;
+  width: 100%;
+  padding-top: 80px;
+  padding-left: 100px;
+  background: linear-gradient(162deg, rgb(12, 87, 40) 0%, rgb(1, 24, 31) 48%, rgb(24, 88, 102) 100%);
+}
+.footer__menu {
+  display: flex;
+}
+.footer__menu--logo {
+  width: 172px;
+  margin-bottom: 40px;
+}
+.footer__menu--social {
+  display: flex;
+}
+.footer__menu--social-logo {
+  margin-right: 135px;
+}
+.footer__menu--social-item {
+  width: 34px;
+  height: 34px;
+  margin-right: 24px;
+  border: 1px solid #38ef7d;
+  border-radius: 50%;
+}
+.footer__menu--social-item:last-child {
+  margin-right: 0;
+}
+.footer__menu--services {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  width: 245px;
+}
+.footer__menu--services-item {
+  margin-bottom: 16px;
+}
+.footer__menu--services-item:last-child {
+  margin-bottom: 0;
+}
+.footer__menu--contacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-row-gap: 16px;
+  grid-column-gap: 20px;
+}
+.footer__menu--contacts-title {
+  font-size: 24px;
+  font-weight: 1.42;
+  margin-bottom: 8px;
+}
+.footer__menu--contacts-phone a {
+  margin-bottom: 7px;
+}
+.footer__menu--contacts-phone a:last-child {
+  margin-bottom: 0;
+}
+.footer__menu--contacts-adress {
+  width: 220px;
+}
+
+.services {
+  margin-right: 90px;
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 address {
   font-style: normal;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=main.css.map */
