@@ -1,9 +1,135 @@
 .header {
-  background-color: aquamarine;
+  width: 100%;
+  display: flex;
+  background-color: #050505;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 86px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    height: 110px;
+  }
+}
+
+.logo {
+  width: 172px;
+  height: 88px;
+}
+
+.nav_list {
+  display: flex;
+  margin: 24px 12px 24px 0;
+}
+@media screen and (min-width: 768px) {
+  .nav_list {
+    margin: 24px 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav_list {
+    margin: 36px 215px;
+  }
+}
+.nav_item {
+  margin-right: 12px;
+}
+@media screen and (min-width: 768px) {
+  .nav_item {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav_item {
+    margin-right: 40px;
+  }
+}
+
+.lang {
+  margin: 24px 0;
+}
+@media screen and (min-width: 768px) {
+  .lang {
+    margin: 24px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lang {
+    margin: 36px 0;
+  }
 }
 
 .footer {
   background-color: burlywood;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.hero {
+  position: relative;
+  background-color: #050505;
+}
+
+.socialIcons {
+  position: absolute;
+  left: -48px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainblock_title {
+    width: 704px;
+    hight: 180px;
+    margin: 190px 0 24px 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mainblock_title {
+    width: 704px;
+    height: 180px;
+    margin: 190px 0 24px 40px;
+  }
+}
+
+.features_list {
+  display: flex;
+  margin: 100px;
+}
+@media screen and (min-width: 768px) {
+  .features_item {
+    margin-right: 64px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .features_item {
+    margin-right: 110px;
+  }
+}
+
+.about_title {
+  font: bold;
+}
+.about_img {
+  position: absolute;
 }
 
 body {

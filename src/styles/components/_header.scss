@@ -1,3 +1,53 @@
+$main_bgcolor: #050505;
+
 .header {
-  background-color: aquamarine;
+  width: 100%;
+  display: flex;
+    @media screen and (min-width: 768px) {
+      height: 86px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+      height: 110px;
+    }
+  background-color: $main_bgcolor;
+}
+
+.logo {
+  width: 172px;
+  height: 88px;
+}
+
+.nav {
+  &_list {
+    display: flex;
+    margin: 24px 12px 24px 0;
+    @media screen and (min-width: 768px) {
+      margin: 24px 100px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin: 36px 215px;
+    }
+  }
+  &_item {
+    margin-right: 12px;
+    @media screen and (min-width: 768px) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.lang {
+  margin: 24px 0;
+  
+    @media screen and (min-width: 768px) {
+      margin: 24px 0;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      margin: 36px 0;
+    }
 }

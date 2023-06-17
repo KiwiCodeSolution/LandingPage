@@ -1,0 +1,23 @@
+.hero {
+  position: relative;
+  background-color: $main_bgcolor;
+}
+.socialIcons {
+  position: absolute;
+  // top: 298px;
+  left: -48px;
+}
+.mainblock {
+  &_title{
+    @media screen and (min-width: 768px) {
+      width: 704px;
+      hight: 180px;
+      margin: 190px 0 24px 40px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 704px;
+      height: 180px;
+      margin: 190px 0 24px 40px;
+    }
+  }
+}
