@@ -1,17 +1,18 @@
-/* Error: expected "{".
- *   ,
- * 2 | @import "./components/header";
- *   |                              ^
- *   '
- *   src\styles\main.scss 2:30  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 28 |         border: 1px solid $green;
+ *    |                           ^^^^^^
+ *    '
+ *   src\styles\components\_footer.scss 28:27  @import
+ *   src\styles\main.scss 2:9                  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-    "Droid Sans Mono", monospace, monospace;
+      "Droid Sans Mono", monospace, monospace;
   white-space: pre;
   display: block;
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 2 \2502  @import "./components/header";\d\a   \2502                               ^\a   \2575 \a   src\\styles\\main.scss 2:30  root stylesheet';
+  content: "Error: Undefined variable.\a    \2577 \a 28 \2502          border: 1px solid $green;\d\a    \2502                            ^^^^^^\a    \2575 \a   src\\styles\\components\\_footer.scss 28:27  @import\a   src\\styles\\main.scss 2:9                  root stylesheet";
 }
