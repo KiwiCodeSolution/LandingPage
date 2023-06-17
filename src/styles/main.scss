@@ -1,3 +1,9 @@
+// UTILS
+
+@import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./utils/global";
+
 @import "./components/header";
 @import "./components/footer";
 @import "./components/container";
@@ -6,9 +12,3 @@
 @import "./components/about";
 
 $main-color: #979797;
-
-// UTILS
-
-@import "./utils/variables";
-@import "./utils/breakpoints";
-@import "./utils/global";
