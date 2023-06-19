@@ -1,8 +1,120 @@
 .about {
+  background-color: $main_bgcolor;
+  background-image: url("../../../src/img/hero.png");
+  background-position: 50% 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 200px;
+  // height: 1900px;
+
   &_title {
     font: bold;
   }
   &_img {
     position: absolute;
+  }
+
+  &__services {
+    display: flex;
+
+    &--text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &--image-container {
+      width: 84px;
+      height: 84px;
+
+      background: linear-gradient($main_bgcolor, $main_bgcolor) padding-box,
+        linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(17, 153, 142, 0)) border-box;
+      border-radius: 50em;
+      border: 10px solid transparent;
+
+      position: relative;
+
+      margin-bottom: 20px;
+
+      &::after {
+        height: 1px;
+        width: 133px;
+        display: inline-block;
+        position: absolute;
+        top: 84px;
+        left: -10px;
+
+        content: "";
+
+        background: $main;
+        border-radius: 2px;
+
+        opacity: 0.1;
+      }
+    }
+
+    &--item {
+      width: 315px;
+      margin-right: 110px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    &--text {
+      line-height: 1.4;
+      opacity: 0.6;
+    }
+  }
+
+  &__company {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 215px;
+
+    margin-top: 75px;
+
+    &--title {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 32px;
+
+      background: -webkit-linear-gradient(0deg, rgba(53, 234, 126, 1), rgba(34, 125, 148, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--text {
+      width: 514px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: $gray;
+
+      span {
+        font-size: 24px;
+        font-weight: 600;
+        color: $main;
+      }
+    }
+
+    &--img {
+      height: 747px;
+      width: 750px;
+    }
   }
 }
