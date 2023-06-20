@@ -80,12 +80,12 @@ ul {
 }
 
 header {
-  width: 1280px;
+  width: 100%;
   height: 110px;
   padding: 10px 0;
   position: absolute;
   top: 0;
-  left: 17%;
+  left: 0;
   z-index: 10;
 }
 
@@ -310,10 +310,6 @@ address {
   position: fixed;
   top: 300px;
   left: 8%;
-  overflow: hidden;
-}
-.hero__socialList:hover, .hero__socialList:focus {
-  overflow: visible;
 }
 .hero__socialList-item {
   width: 34px;
@@ -519,6 +515,7 @@ address {
 .howitworks__container {
   display: flex;
   padding-bottom: 169px;
+  position: relative;
 }
 .howitworks__title {
   font-size: 48px;
@@ -548,12 +545,15 @@ address {
 .howitworks__buttons--item:last-child {
   margin-bottom: 0;
 }
+.howitworks__list {
+  position: relative;
+}
 .howitworks__item {
   padding: 10px 0;
   display: flex;
 }
 .howitworks__item div {
-  width: 370px;
+  min-width: 370px;
 }
 .howitworks__item--title {
   font-weight: 500;
@@ -576,7 +576,7 @@ address {
   position: absolute;
   height: 470px;
   top: 0;
-  right: 172px;
+  left: 780px;
 }
 .howitworks__img--circle_1 {
   position: absolute;
@@ -586,8 +586,8 @@ address {
   background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
   opacity: 0.2;
   filter: blur(100px);
-  top: -27%;
-  left: 1.56%;
+  top: -40%;
+  left: -10%;
   z-index: 0;
 }
 .howitworks__img--circle_2 {
@@ -598,8 +598,8 @@ address {
   background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
   opacity: 0.2;
   filter: blur(100px);
-  right: -3.38%;
-  top: -10%;
+  top: -20%;
+  right: -25%;
 }
 
 .is-hidden {

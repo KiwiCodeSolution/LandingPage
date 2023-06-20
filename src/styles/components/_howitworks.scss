@@ -5,6 +5,7 @@
   &__container {
     display: flex;
     padding-bottom: 169px;
+    position: relative;
   }
 
   &__title {
@@ -40,12 +41,16 @@
     }
   }
 
+  &__list {
+    position: relative;
+  }
+
   &__item {
     padding: 10px 0;
     display: flex;
 
     div {
-      width: 370px;
+      min-width: 370px;
     }
 
     &--title {
@@ -74,7 +79,7 @@
       height: 470px;
 
       top: 0;
-      right: 172px;
+      left: 780px;
     }
   }
 
@@ -89,8 +94,8 @@
       opacity: 0.2;
       filter: blur(100px);
 
-      top: -27%;
-      left: 1.56%;
+      top: -40%;
+      left: -10%;
       z-index: 0;
     }
 
@@ -104,9 +109,8 @@
       opacity: 0.2;
       filter: blur(100px);
 
-      right: -3.38%;
-
-      top: -10%;
+      top: -20%;
+      right: -25%;
     }
   }
 }
