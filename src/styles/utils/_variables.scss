@@ -4,6 +4,7 @@ $primary-font: "Cabin", normal;
 // ----- COLORS ------
 
 $main: #ffffff;
+$main_bgcolor: #050505;
 $text-button: #f4fdf9;
 $green: #38ef7d;
 $gray: #9da1a1;
@@ -21,3 +22,6 @@ $bg-hero: linear-gradient(180deg, #050505 45.63%, rgba(5, 5, 5, 0) 100%);
 $bg-button: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
 $bg-button-secondary: linear-gradient(180deg, #2ad86c 0%, #1c7991 100%);
 $bg-text: linear-gradient(90.97deg, #35ea7e 1.95%, #227d94 90.98%);
+$bg-title: -webkit-linear-gradient(0deg, rgba(53, 234, 126, 1), rgba(34, 125, 148, 1));
+$bg-button-section-how: -webkit-linear-gradient(0deg, rgba(56, 239, 125, 1), rgba(34, 125, 148, 1));
+$bg-image: linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(17, 153, 142, 0));

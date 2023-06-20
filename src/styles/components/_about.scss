@@ -28,8 +28,7 @@
       width: 84px;
       height: 84px;
 
-      background: linear-gradient($main_bgcolor, $main_bgcolor) padding-box,
-        linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(17, 153, 142, 0)) border-box;
+      background: linear-gradient($main_bgcolor, $main_bgcolor) padding-box, $bg-image border-box;
       border-radius: 50em;
       border: 10px solid transparent;
 
@@ -94,7 +93,8 @@
       font-weight: 700;
       margin-bottom: 32px;
 
-      background: -webkit-linear-gradient(0deg, rgba(53, 234, 126, 1), rgba(34, 125, 148, 1));
+      background: $bg-title;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
