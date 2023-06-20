@@ -1,6 +1,6 @@
 const section = document.querySelector(".howitworks");
-var btns = section.querySelectorAll("button");
-var liItems = section.querySelectorAll("li");
+const btns = section.querySelectorAll("button");
+const liItems = section.querySelectorAll("li");
 
 btns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {

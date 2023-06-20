@@ -1,5 +1,4 @@
 .howitworks {
-  // min-height: 640px;
   background-color: $main_bgcolor;
   position: relative;
 
@@ -13,7 +12,7 @@
     font-weight: 700;
     line-height: 1.4;
 
-    background: -webkit-linear-gradient(0deg, rgba(53, 234, 126, 1), rgba(34, 125, 148, 1));
+    background: $bg-title;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -32,7 +31,7 @@
         margin-bottom: 0;
       }
 
-      background: -webkit-linear-gradient(0deg, rgba(56, 239, 125, 1), rgba(34, 125, 148, 1));
+      background: $bg-button-section-how;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.2;
@@ -42,7 +41,7 @@
   &__item {
     padding: 10px 0;
     display: flex;
-    // position: relative;
+
     div {
       width: 370px;
     }
@@ -54,7 +53,7 @@
 
       margin-bottom: 10px;
 
-      background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
+      background: $bg-button;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -71,7 +70,6 @@
 
     &--img {
       position: absolute;
-      // width: 605px;
       height: 470px;
 
       top: 0;
@@ -86,7 +84,7 @@
       height: 430px;
       border-radius: 50%;
 
-      background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
+      background: $bg-button;
       opacity: 0.2;
       filter: blur(100px);
 
@@ -103,7 +101,7 @@
 
       border: 5px solid red;
 
-      background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
+      background: $bg-button;
       opacity: 0.2;
       filter: blur(100px);
 
