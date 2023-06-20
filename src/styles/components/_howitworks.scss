@@ -5,16 +5,7 @@
   &__container {
     display: flex;
     padding-bottom: 169px;
-  }
-
-  &__title {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.4;
-
-    background: $bg-title;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: relative;
   }
 
   &__buttons {
@@ -32,10 +23,15 @@
       }
 
       background: $bg-button-section-how;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.2;
     }
+  }
+
+  &__list {
+    position: relative;
   }
 
   &__item {
@@ -43,7 +39,7 @@
     display: flex;
 
     div {
-      width: 370px;
+      min-width: 370px;
     }
 
     &--title {
@@ -57,7 +53,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-fill-color: transparent;
     }
 
     &--text {
@@ -73,7 +68,7 @@
       height: 470px;
 
       top: 0;
-      left: 870px;
+      left: 780px;
     }
   }
 
@@ -88,8 +83,8 @@
       opacity: 0.2;
       filter: blur(100px);
 
-      top: -27%;
-      left: 1.56%;
+      top: -40%;
+      left: -10%;
       z-index: 0;
     }
 
@@ -99,15 +94,12 @@
       height: 555px;
       border-radius: 50%;
 
-      border: 5px solid red;
-
       background: $bg-button;
       opacity: 0.2;
       filter: blur(100px);
 
-      right: -3.38%;
-
-      top: -10%;
+      top: -20%;
+      right: -25%;
     }
   }
 }

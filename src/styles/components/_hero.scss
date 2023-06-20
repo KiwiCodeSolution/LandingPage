@@ -1,23 +1,118 @@
 .hero {
   position: relative;
+  height: 910px;
+  padding: 190px 0;
+
   background-color: $main_bgcolor;
+  background-image: url("../../../src/img/header-hero.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
-.socialIcons {
-  position: absolute;
-  // top: 298px;
-  left: -48px;
+
+.hero__socialList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  z-index: 15;
+
+  position: fixed;
+  top: 300px;
+  left: 8%;
+
+  &-item {
+    width: 34px;
+    height: 34px;
+    margin-right: 24px;
+    border: 1px solid green($color: #000000);
+    border-radius: 50%;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
+    }
+  }
 }
 .mainblock {
-  &_title{
+  &_title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+
     @media screen and (min-width: 768px) {
       width: 704px;
       hight: 180px;
-      margin: 190px 0 24px 40px;
+      // margin: 0 0 24px 40px;
     }
     @media screen and (min-width: 1280px) {
       width: 704px;
       height: 180px;
-      margin: 190px 0 24px 40px;
+      // margin: 0 0 24px 40px;
     }
   }
+
+  &_text {
+    font-size: 24px;
+    line-height: 1.6;
+    width: 452px;
+
+    margin-bottom: 16px;
+  }
+
+  &_indicators {
+    display: flex;
+    margin-bottom: 40px;
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      align-items: center;
+      margin-right: 16px;
+
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.6;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--number {
+      font-size: 40px;
+
+      background: $bg-button;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &_button {
+    width: 240px;
+    height: 56px;
+    padding: 12px 34px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.6;
+
+    background: $bg-button;
+    border-radius: 32px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+    }
+  }
+}
+
+.accent {
+  background: $bg-title;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
