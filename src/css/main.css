@@ -79,6 +79,16 @@ ul {
   }
 }
 
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+  background: -webkit-linear-gradient(0deg, rgb(53, 234, 126), rgb(34, 125, 148));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header {
   width: 100%;
   height: 110px;
@@ -483,15 +493,6 @@ address {
   grid-row-gap: 215px;
   margin-top: 75px;
 }
-.about__company--title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 32px;
-  background: -webkit-linear-gradient(0deg, rgb(53, 234, 126), rgb(34, 125, 148));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .about__company--text {
   width: 514px;
   font-size: 20px;
@@ -516,15 +517,6 @@ address {
   display: flex;
   padding-bottom: 169px;
   position: relative;
-}
-.howitworks__title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.4;
-  background: -webkit-linear-gradient(0deg, rgb(53, 234, 126), rgb(34, 125, 148));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .howitworks__buttons {
   display: flex;
@@ -622,18 +614,22 @@ address {
 
 .portfolio {
   height: 300px;
+  background-color: #050505;
 }
 
 .team {
   height: 300px;
+  background-color: #050505;
 }
 
 .consultation {
   height: 300px;
+  background-color: #050505;
 }
 
 .testimonials {
   height: 300px;
+  background-color: #050505;
 }
 
 /*# sourceMappingURL=main.css.map */

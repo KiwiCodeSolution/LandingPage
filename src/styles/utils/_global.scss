@@ -85,3 +85,14 @@ ul {
     width: 1280px;
   }
 }
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  background: $bg-title;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

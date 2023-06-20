@@ -8,17 +8,6 @@
     position: relative;
   }
 
-  &__title {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.4;
-
-    background: $bg-title;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   &__buttons {
     display: flex;
     flex-direction: column;
