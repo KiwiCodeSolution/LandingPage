@@ -13,6 +13,7 @@
     line-height: 1.4;
 
     background: $bg-title;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -32,6 +33,7 @@
       }
 
       background: $bg-button-section-how;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.2;
@@ -57,7 +59,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-fill-color: transparent;
     }
 
     &--text {
@@ -73,7 +74,7 @@
       height: 470px;
 
       top: 0;
-      left: 870px;
+      right: 172px;
     }
   }
 
@@ -98,8 +99,6 @@
       width: 555px;
       height: 555px;
       border-radius: 50%;
-
-      border: 5px solid red;
 
       background: $bg-button;
       opacity: 0.2;

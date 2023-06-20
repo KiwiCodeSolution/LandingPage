@@ -1,6 +1,7 @@
 // import '../../style.css'
 import "../css/main.css";
-import "./how_it_works";
+import "./howItWorks";
+import "./numberСhange";
 // import { setupCounter } from './counter.js'
 
 // document.querySelector('#app').innerHTML = `
