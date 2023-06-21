@@ -7,3 +7,13 @@ jQuery(function () {
     }
   });
 });
+
+jQuery(function () {
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() >= $(document).height() - "900") {
+      $(".header__socialList").css("display", "none");
+    } else {
+      $(".header__socialList").css("display", "flex");
+    }
+  });
+});
