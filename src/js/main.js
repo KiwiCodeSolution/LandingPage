@@ -2,6 +2,9 @@
 import "../css/main.css";
 import "./howItWorks";
 import "./numberСhange";
+import "./swiper";
+import "./stylesNavBar";
+
 // import { setupCounter } from './counter.js'
 
 // document.querySelector('#app').innerHTML = `
