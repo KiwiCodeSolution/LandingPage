@@ -1,5 +1,48 @@
 .team {
-  height: 600px;
+  // height: 600px;
   background-color: $main_bgcolor;
   position: relative;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 20px;
+
+    &--item {
+    }
+
+    &--front {
+      position: relative;
+    }
+
+    &--back {
+    }
+
+    &--img {
+      width: 316px;
+      height: 405px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      transform: rotateY(360deg);
+      transition: 1s;
+
+      &:hover {
+        transform: rotateY(180deg);
+        transition: 1s;
+      }
+    }
+
+    &--title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.4;
+
+      margin-bottom: 6px;
+    }
+
+    &--text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
 }

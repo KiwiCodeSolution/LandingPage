@@ -89,6 +89,13 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
+.section__text {
+  margin-top: 8px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
 header {
   width: 100%;
   height: 110px;
@@ -229,10 +236,20 @@ header__color {
 .footer {
   height: 440px;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 180px;
   padding-left: 100px;
   position: relative;
-  background: linear-gradient(162deg, rgb(12, 87, 40) 0%, rgb(1, 24, 31) 48%, rgb(24, 88, 102) 100%);
+  background-image: url("../../../src/img/footer.png");
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  transform: translate(0px, 0px);
+  background: linear-gradient(180deg, rgb(5, 5, 5), rgba(5, 5, 5, 0));
 }
 .footer__menu {
   display: flex;
@@ -632,21 +649,49 @@ address {
   background-color: #050505;
   position: relative;
   padding: 36px 0;
-}
-.portfolio__text {
-  margin-top: 8px;
-  margin-bottom: 40px;
-  font-size: 24px;
-  line-height: 1.6;
+  background-image: url("../../../src/img/circle_3.png");
+  background-size: 309px 309px;
+  background-repeat: no-repeat;
+  background-position: top 5% left 92%;
 }
 
 .swiper {
   width: 100%;
 }
+
 .team {
-  height: 600px;
   background-color: #050505;
   position: relative;
+}
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 20px;
+}
+.team__list--front {
+  position: relative;
+}
+.team__list--img {
+  width: 316px;
+  height: 405px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  transform: rotateY(360deg);
+  transition: 1s;
+}
+.team__list--img:hover {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+.team__list--title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.team__list--text {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .consultation {
