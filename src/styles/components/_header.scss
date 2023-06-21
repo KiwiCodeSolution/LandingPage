@@ -46,6 +46,33 @@ header {
     display: flex;
     align-items: center;
   }
+
+  &__socialList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    z-index: 30;
+
+    position: fixed;
+    top: 300px;
+    left: 5%;
+
+    &-item {
+      width: 34px;
+      height: 34px;
+      margin-right: 24px;
+      border: 1px solid green($color: #000000);
+      border-radius: 50%;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
+      }
+    }
+  }
 }
 
 .logo {

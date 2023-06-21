@@ -3,7 +3,7 @@ import "../css/main.css";
 import "./howItWorks";
 import "./numberСhange";
 import "./swiper";
-import "./menu";
+import "./stylesNavBar";
 
 // import { setupCounter } from './counter.js'
 
