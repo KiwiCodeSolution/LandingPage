@@ -770,9 +770,92 @@ address {
 }
 
 .consultation {
-  height: 600px;
   background-color: #050505;
   position: relative;
+  background-image: url("../../../src/img/circle_4.png");
+  background-size: 610px, cover;
+  background-repeat: no-repeat;
+  background-position: top -70px right 20px;
+  padding-bottom: 55px;
+}
+.consultation__step--list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0;
+  justify-content: space-between;
+  width: 860px;
+  height: 220px;
+  border: 0.5px solid rgba(56, 239, 125, 0.4);
+}
+.consultation__step--item {
+  position: relative;
+  padding: 15px 64px 15px 15px;
+  border: 0.5px solid rgba(56, 239, 125, 0.4);
+  border-collapse: separate;
+}
+.consultation__step--number {
+  top: 8px;
+  left: 8px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #38ef7d;
+  text-align: center;
+  text-justify: auto;
+  border: 1px solid rgba(56, 239, 125, 0.4);
+  border-radius: 50%;
+}
+.consultation__step--title {
+  font-weight: 700;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+.consultation__img {
+  position: absolute;
+  right: 40px;
+  bottom: 165px;
+}
+.consultation__form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 24px;
+  justify-content: space-between;
+  width: 900px;
+  margin-top: 117px;
+  margin-left: auto;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 239, 125, 0.4);
+  background: #0a180f;
+}
+.consultation__form--lable {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin-bottom: 5px;
+}
+.consultation__form--input {
+  width: 280px;
+  height: 44px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 239, 125, 0.4);
+  background: #0a180f;
+  outline: none;
+}
+.consultation__form--input:focus {
+  border: 1px solid #38ef7d;
+}
+.consultation__form--button {
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+.consultation .section__text {
+  text-transform: uppercase;
 }
 
 .testimonials {
