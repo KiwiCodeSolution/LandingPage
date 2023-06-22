@@ -1,24 +1,25 @@
 .team {
   background-color: $main_bgcolor;
   position: relative;
+  padding-bottom: 100px;
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 30px;
+    // display: grid;
+    // grid-template-columns: repeat(4, minmax(0, 1fr));
+    // column-gap: 30px;
     position: relative;
     height: 650px;
 
     &--item {
-      width: 324px;
+      width: 314px;
       height: 100%;
       padding: 0 5px;
     }
 
     &--card {
       position: relative;
-      width: 316px;
-      height: 405px;
+      width: 300px;
+      height: 390px;
       margin-bottom: 16px;
 
       perspective: 1000px;
@@ -45,8 +46,8 @@
 
     &--back,
     &--img {
-      width: 316px;
-      height: 405px;
+      width: 300px;
+      height: 390px;
       border-radius: 16px;
     }
 
@@ -98,4 +99,36 @@
       }
     }
   }
+}
+
+.team > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  top: 150%;
+}
+
+.team > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  // top: 100%;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  background: red;
+}
+
+.team > .swiper-pagination {
+  // top: 100%;
+}
+
+.team > .swiper {
+  padding: 120px 0;
+  // top: 100%;
 }
