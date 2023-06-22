@@ -3,7 +3,7 @@
   background-image: url("../../../src/img/circle_1.png"), url("../../../src/img/circle_2.png");
   background-size: 420px, 530px, cover;
   background-repeat: no-repeat;
-  background-position: top -10% left 0, top 70px right 15%;
+  background-position: top -10% left 15%, top 70px right 15%;
   position: relative;
   padding-top: 100px;
 
@@ -21,7 +21,7 @@
 
     &--item {
       font-size: 48px;
-      line-height: 1.6;
+
       margin-bottom: 16px;
       &:last-child {
         margin-bottom: 0;
@@ -50,8 +50,6 @@
     &--title {
       font-weight: 500;
       font-size: 32px;
-      line-height: 1.6;
-
       margin-bottom: 10px;
 
       background: $bg-button;
@@ -62,8 +60,6 @@
 
     &--text {
       width: 370px;
-      font-size: 16px;
-      line-height: 1.6;
       opacity: 0.8;
       margin-right: 247px;
     }

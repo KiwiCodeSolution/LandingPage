@@ -6,6 +6,7 @@ body {
   font-family: $primary-font;
   font-size: 16px;
   color: $main;
+  line-height: 1.6;
 
   // background-color: $light-gray;
 }
@@ -102,5 +103,4 @@ ul {
   margin-bottom: 40px;
 
   font-size: 24px;
-  line-height: 1.6;
 }

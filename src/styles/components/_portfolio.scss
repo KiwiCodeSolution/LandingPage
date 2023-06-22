@@ -7,9 +7,34 @@
   background-image: url("../../../src/img/circle_3.png");
   background-size: 309px 309px;
   background-repeat: no-repeat;
-  background-position: top 5% left 92%;
+  background-position: top 5% left 88%;
 }
 
 .swiper {
   width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: $main;
+}
+
+.swiper-button-next {
+  background: $bg-button-section-how;
+}
+
+.swiper-button-prev {
+  background: -webkit-linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(34, 125, 148, 1));
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-variant: $main;
+}
+
+.swiper-pagination-bullet-active {
+  background: $green;
 }
