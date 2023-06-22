@@ -862,6 +862,14 @@ address {
   height: 600px;
   background-color: #050505;
   position: relative;
+  padding: 68px 0 125px 0;
+  background-image: url("../../../src/img/testimorials.png");
+  background-size: 836px cover;
+  background-repeat: no-repeat;
+  background-position: top 40px left 0;
+}
+.testimonials__title {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
