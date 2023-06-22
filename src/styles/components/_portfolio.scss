@@ -7,7 +7,7 @@
   background-image: url("../../../src/img/circle_3.png");
   background-size: 309px 309px;
   background-repeat: no-repeat;
-  background-position: top 5% left 88%;
+  background-position: top 5% right 50px;
 }
 
 .swiper {
@@ -41,4 +41,10 @@
 
 .swiper-slide {
   margin: 0;
+}
+.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  background: rgba(67, 75, 75, 0.6);
 }
