@@ -4,8 +4,8 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 
   //   speed: 400,
-  //   slidesPerView: 3,
-  //   spaceBetween: 30,
+  // slidesPerView: 3,
+  // spaceBetween: 10,
 
   // If we need pagination
   pagination: {
@@ -30,16 +30,16 @@ const swiper = new Swiper(".swiper", {
     // when window width is >= 480px
     481: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 10,
     },
     // when window width is >= 640px
     769: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 10,
     },
     1281: {
       slidesPerView: 4,
-      spaceBetween: 40,
+      spaceBetween: 10,
     },
   },
 });

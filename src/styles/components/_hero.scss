@@ -41,9 +41,7 @@
 
   &_text {
     font-size: 24px;
-    line-height: 1.6;
     width: 452px;
-
     margin-bottom: 16px;
   }
 
@@ -60,7 +58,6 @@
 
       font-weight: 700;
       font-size: 24px;
-      line-height: 1.6;
 
       &:last-child {
         margin-right: 0;
@@ -83,7 +80,6 @@
     padding: 12px 34px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.6;
 
     background: $bg-button;
     border-radius: 32px;

@@ -4,26 +4,47 @@
   position: relative;
   padding: 36px 0;
 
-  &__text {
-    margin-top: 8px;
-    margin-bottom: 40px;
-
-    font-size: 24px;
-    line-height: 1.6;
-  }
+  background-image: url("../../../src/img/circle_3.png");
+  background-size: 309px 309px;
+  background-repeat: no-repeat;
+  background-position: top 5% right 50px;
 }
 
 .swiper {
   width: 100%;
-  // padding: 0 15px;
+}
 
-  &-wrapper {
-  }
+.swiper-button-next,
+.swiper-button-prev {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: $main;
+}
 
-  &-slide {
-    // margin-right: 20px;
-    // &:last-child {
-    //   margin-right: 0;
-    // }
-  }
+.swiper-button-next {
+  background: $bg-button-section-how;
+}
+
+.swiper-button-prev {
+  background: -webkit-linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(34, 125, 148, 1));
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-variant: $main;
+}
+
+.swiper-pagination-bullet-active {
+  background: $green;
+}
+
+.swiper-slide {
+  margin: 0;
+}
+.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  background: rgba(67, 75, 75, 0.6);
 }
