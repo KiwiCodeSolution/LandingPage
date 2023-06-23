@@ -859,7 +859,6 @@ address {
 }
 
 .testimonials {
-  height: 600px;
   background-color: #050505;
   position: relative;
   padding: 68px 0 125px 0;
@@ -870,6 +869,43 @@ address {
 }
 .testimonials__title {
   text-align: center;
+}
+.testimonials__list div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonials__list--img {
+  width: 100%;
+}
+.testimonials__card {
+  position: absolute;
+  top: 292px;
+  left: 582px;
+  width: 432px;
+  height: 430px;
+  border-radius: 8px;
+  border: 1px solid #38ef7d;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+  background: #0a180f;
+}
+.testimonials__card div {
+  margin: 5px auto;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+.testimonials__card--img {
+  width: 100%;
+}
+.testimonials__card p {
+  text-align: center;
+  font-size: 40px;
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

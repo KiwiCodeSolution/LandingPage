@@ -5,6 +5,8 @@ import "./numberСhange";
 import "./swiper";
 import "./stylesNavBar";
 
+import "./testimonials";
+
 // import { setupCounter } from './counter.js'
 
 // document.querySelector('#app').innerHTML = `

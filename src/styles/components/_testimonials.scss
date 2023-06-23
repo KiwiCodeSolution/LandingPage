@@ -1,5 +1,5 @@
 .testimonials {
-  height: 600px;
+  // height: 600px;
   background-color: $main_bgcolor;
   position: relative;
 
@@ -12,5 +12,52 @@
 
   &__title {
     text-align: center;
+  }
+
+  &__list {
+    div {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &--img {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    position: absolute;
+    top: 292px;
+    left: 582px;
+
+    width: 432px;
+    height: 430px;
+    border-radius: 8px;
+    border: 1px solid #38ef7d;
+    // opacity: 0.20000000298023224;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    background: #0a180f;
+
+    div {
+      margin: 5px auto;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: $main;
+    }
+
+    &--img {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      font-size: 40px;
+      color: red;
+    }
   }
 }
