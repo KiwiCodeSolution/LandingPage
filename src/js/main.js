@@ -6,6 +6,7 @@ import "./swiper";
 import "./stylesNavBar";
 
 import "./testimonials";
+import "./parallax";
 
 // import { setupCounter } from './counter.js'
 

@@ -1,9 +1,6 @@
 .howitworks {
   background-color: $main_bgcolor;
-  background-image: url("../../../src/img/circle_1.png"), url("../../../src/img/circle_2.png");
-  background-size: 420px, 530px, cover;
-  background-repeat: no-repeat;
-  background-position: top -10% left 40px, top 70px right 15%;
+
   position: relative;
   padding-top: 100px;
 
@@ -78,6 +75,28 @@
 
   &__text-wrapper {
     margin-right: 137px;
+  }
+
+  &--circle1,
+  &--circle2 {
+    position: absolute;
+    opacity: 0.20000000298023224;
+    background: $bg-button-section-how;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+
+  &--circle1 {
+    top: -250px;
+    left: -105px;
+    width: 380px;
+    height: 380px;
+  }
+  &--circle2 {
+    top: -10px;
+    right: -10px;
+    width: 480px;
+    height: 480px;
   }
 }
 
