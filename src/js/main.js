@@ -7,6 +7,7 @@ import "./stylesNavBar";
 
 import "./testimonials";
 import "./parallax";
+import "./modal";
 
 // import { setupCounter } from './counter.js'
 
