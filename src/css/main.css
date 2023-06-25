@@ -369,7 +369,7 @@ address {
 @media screen and (min-width: 768px) {
   .mainblock_title {
     width: 704px;
-    hight: 180px;
+    height: 180px;
   }
 }
 @media screen and (min-width: 1280px) {
