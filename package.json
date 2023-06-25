@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kiwicodesolution.github.io/kiwicode/",
   "name": "landingpage",
   "private": true,
   "version": "0.0.0",
@@ -7,6 +8,7 @@
     "sass": "sass --watch src/styles:src/css",
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "devDependencies": {
