@@ -8,6 +8,40 @@
   background-size: 309px 309px;
   background-repeat: no-repeat;
   background-position: top 5% right 50px;
+
+  &__container {
+    position: relative;
+
+    &--circle1,
+    &--circle2,
+    &--circle3 {
+      position: absolute;
+      background: $bg-button-section-how;
+      border-radius: 50%;
+      filter: blur(20px);
+    }
+    &--circle1 {
+      top: -184px;
+      right: -50px;
+      width: 309px;
+      height: 309px;
+      opacity: 0.30000001192092896;
+    }
+    &--circle2 {
+      top: -132px;
+      right: -7px;
+      width: 206px;
+      height: 206px;
+
+      opacity: 0.30000001192092896;
+    }
+    &--circle3 {
+      top: -101px;
+      right: 32px;
+      width: 143.056px;
+      height: 143.055px;
+    }
+  }
 }
 
 .swiper {
