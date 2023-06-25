@@ -762,7 +762,7 @@ address {
 }
 .team__list--back, .team__list--img {
   width: 300px;
-  height: 390px;
+  max-height: 390px;
   border-radius: 16px;
 }
 .team__list--back {
