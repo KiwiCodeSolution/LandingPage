@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   font-family: "Cabin", normal;
@@ -94,6 +98,24 @@ ul {
   margin-top: 8px;
   margin-bottom: 40px;
   font-size: 24px;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
 
 header {
@@ -233,7 +255,10 @@ header__color {
   padding-top: 180px;
   padding-left: 100px;
   position: relative;
-  background-image: url("../../../src/img/footer.png");
+  background-image: url("/img/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
 }
 .footer::after {
   content: "";
@@ -349,10 +374,10 @@ address {
   width: 100%;
   height: 100%;
   padding: 150px 0;
-  background-image: url("../../../src/img/header-hero.png");
+  background-image: url("/img/header-hero.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: top 30% left 50%;
 }
 
 .mainblock {
@@ -443,7 +468,7 @@ address {
 
 .about {
   background-color: #050505;
-  background-image: url("../../../src/img/hero.png");
+  background-image: url("/img/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 50% left 50%;
@@ -626,20 +651,6 @@ address {
   height: 480px;
 }
 
-.is-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  pointer-events: none;
-}
-
 .active {
   opacity: 1;
 }
@@ -649,10 +660,6 @@ address {
   background-color: #050505;
   position: relative;
   padding: 36px 0;
-  background-image: url("../../../src/img/circle_3.png");
-  background-size: 309px 309px;
-  background-repeat: no-repeat;
-  background-position: top 5% right 50px;
 }
 .portfolio__container {
   position: relative;
@@ -765,6 +772,11 @@ address {
   max-height: 390px;
   border-radius: 16px;
 }
+.team__list--front {
+  max-height: 387px;
+  background-color: white;
+  border-radius: 16px;
+}
 .team__list--back {
   padding: 20px;
   background: linear-gradient(180deg, #2ad86c 0%, #1c7991 100%);
@@ -816,10 +828,6 @@ address {
 .consultation {
   background-color: #050505;
   position: relative;
-  background-image: url("../../../src/img/circle_4.png");
-  background-size: 610px, cover;
-  background-repeat: no-repeat;
-  background-position: top -70px right 20px;
   padding-bottom: 55px;
 }
 .consultation__step {
@@ -918,7 +926,7 @@ address {
 }
 
 .testimonials {
-  height: 830px;
+  height: 930px;
   background-color: #050505;
   position: relative;
   padding: 68px 0 125px 0;
@@ -1113,6 +1121,114 @@ address {
   left: 32px;
   width: 44px;
   height: 44px;
+}
+
+.backdrop {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  backdrop-filter: blur(10px);
+  transition-property: backdrop-filter;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 540px;
+  padding: 0 0 0 10px;
+  display: flex;
+  border-radius: 16px;
+  background: #050505;
+  background-image: url("/img/modal.png");
+  box-shadow: 0px 4px 40px 0px rgba(56, 239, 125, 0.6);
+}
+.modal__img {
+  margin-top: 40px;
+  width: 312.46px;
+  height: 500px;
+}
+.modal__container {
+  padding: 40px;
+  background: #050505;
+  border-radius: 16px;
+  position: relative;
+}
+.modal__title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.modal__text {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  opacity: 0.6000000238;
+  margin-bottom: 27px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal__form--lable {
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.modal__form--input {
+  width: 280px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 239, 125, 0.4);
+  background: #0a180f;
+  margin-bottom: 24px;
+  outline: none;
+}
+.modal__form--input:focus {
+  border: 1px solid #38ef7d;
+}
+.modal__form--button {
+  margin-top: 8px;
+}
+.modal--close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.modal--close:focus, .modal--close:hover {
+  background: rgba(56, 239, 125, 0.4);
+}
+.modal--close:focus:hover, .modal--close:focus:focus, .modal--close:hover:hover, .modal--close:hover:focus {
+  box-shadow: 0px 0px 15px 0px rgba(43, 209, 195, 0.8);
+}
+.modal__circle {
+  position: absolute;
+  object-fit: cover;
+  top: 270px;
+  left: 263px;
+  width: 190px;
+  height: 170px;
+  opacity: 0.200000003;
+  background: -webkit-linear-gradient(0deg, rgb(56, 239, 125), rgb(34, 125, 148));
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */
