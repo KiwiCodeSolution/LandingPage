@@ -19,7 +19,7 @@ imgwrapper.forEach(function (wrapp) {
     const result = datas.find((el) => el.id === wrapp.id);
 
     if (result) {
-      cardElement.innerHTML = `<div class=testimonials__card--imgwrapper><img src="/src/img/quote-up.png" alt="quote-up" class=quote-up />
+      cardElement.innerHTML = `<div class=testimonials__card--imgwrapper><img src="/img/quote-up.png" alt="quote-up" class=quote-up />
     <img src="${result.photo}" alt="${result.name}" class=testimonials__card--img />
     </div>
     <p class=testimonials__card--name >${result.name}</p>
@@ -36,7 +36,7 @@ function firstRender() {
   const randomId = Math.floor(Math.random() * imgwrapper.length) - 1;
 
   if (datas[randomId]) {
-    cardElement.innerHTML = `<div class=testimonials__card--imgwrapper><img src="/src/img/quote-up.png" alt="quote-up" class=quote-up />
+    cardElement.innerHTML = `<div class=testimonials__card--imgwrapper><img src="/img/quote-up.png" alt="quote-up" class=quote-up />
     <img src="${datas[randomId].photo}" alt="${datas[randomId].name}" class=testimonials__card--img />
     </div>
     <p class=testimonials__card--name >${datas[randomId].name}</p>
