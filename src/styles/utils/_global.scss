@@ -1,4 +1,7 @@
 // GLOBAL RESET
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   box-sizing: border-box;
@@ -104,4 +107,26 @@ ul {
   margin-bottom: 40px;
 
   font-size: 24px;
+}
+
+.is-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+
+  margin: -1px;
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
