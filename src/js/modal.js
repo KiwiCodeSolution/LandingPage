@@ -12,8 +12,6 @@ const refs = {
 };
 
 const  {VITE_TOKEN: TOKEN, VITE_CHAT_ID: CHAT_ID} = import.meta.env;
-console.log(TOKEN);
-console.log(CHAT_ID);
 const API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 refs.openModalBtnHero.addEventListener("click", onOpenModal);
