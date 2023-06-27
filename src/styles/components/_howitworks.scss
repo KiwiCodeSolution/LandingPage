@@ -28,7 +28,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0.2;
+      opacity: 0.5;
     }
   }
 
@@ -80,7 +80,7 @@
   &--circle1,
   &--circle2 {
     position: absolute;
-    opacity: 0.20000000298023224;
+    opacity: 0.2;
     background: $bg-button-section-how;
     border-radius: 50%;
     filter: blur(60px);

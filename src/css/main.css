@@ -81,6 +81,7 @@ ul {
 }
 
 .title {
+  width: fit-content;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.4;
@@ -233,7 +234,7 @@ header__color {
   padding-top: 180px;
   padding-left: 100px;
   position: relative;
-  background-image: url("../../../src/img/footer.png");
+  background-image: url("/img/footer.png");
 }
 .footer::after {
   content: "";
@@ -349,7 +350,7 @@ address {
   width: 100%;
   height: 100%;
   padding: 150px 0;
-  background-image: url("../../../src/img/header-hero.png");
+  background-image: url("/img/header-hero.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -443,7 +444,7 @@ address {
 
 .about {
   background-color: #050505;
-  background-image: url("../../../src/img/hero.png");
+  background-image: url("/img/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 50% left 50%;
@@ -561,7 +562,7 @@ address {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 .howitworks__buttons--item:last-child {
   margin-bottom: 0;
@@ -608,7 +609,7 @@ address {
 }
 .howitworks--circle1, .howitworks--circle2 {
   position: absolute;
-  opacity: 0.200000003;
+  opacity: 0.2;
   background: -webkit-linear-gradient(0deg, rgb(56, 239, 125), rgb(34, 125, 148));
   border-radius: 50%;
   filter: blur(60px);
@@ -649,7 +650,6 @@ address {
   background-color: #050505;
   position: relative;
   padding: 36px 0;
-  background-image: url("../../../src/img/circle_3.png");
   background-size: 309px 309px;
   background-repeat: no-repeat;
   background-position: top 5% right 50px;
@@ -816,7 +816,6 @@ address {
 .consultation {
   background-color: #050505;
   position: relative;
-  background-image: url("../../../src/img/circle_4.png");
   background-size: 610px, cover;
   background-repeat: no-repeat;
   background-position: top -70px right 20px;
