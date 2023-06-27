@@ -11,7 +11,7 @@ const refs = {
   notification: document.querySelector(".notification__backdrop"),
 };
 
-const  {VITE_TOKEN: TOKEN, VITE_CHAT_ID: CHAT_ID} = import.meta.env;
+const { VITE_TOKEN: TOKEN, VITE_CHAT_ID: CHAT_ID } = import.meta.env;
 const API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 refs.openModalBtnHero.addEventListener("click", onOpenModal);
