@@ -66,6 +66,9 @@
     &--lable {
       line-height: 1.4;
       margin-bottom: 8px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     &--input {
@@ -76,6 +79,7 @@
       background: #0a180f;
       margin-bottom: 24px;
       outline: none;
+      color: #cdcedf;
 
       &:focus {
         border: 1px solid $green;
@@ -120,6 +124,13 @@
     filter: blur(40px);
   }
 }
+.error {
+  position: absolute;
+  top: 70px;
+  font-size: 12px;
+  color: red;
+  font-style: italic;
+}
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -138,12 +149,19 @@
   padding: 25px 10px;
 
   border-radius: 16px;
-  background: $bg-button;
-
-  box-shadow: 0px 4px 40px 0px rgba(56, 239, 125, 0.6);
 
   &__text {
     font-size: 35px;
     text-align: center;
   }
+}
+
+.notification__success {
+  background: $bg-button;
+  box-shadow: 0px 4px 40px 0px rgba(56, 239, 125, 0.6);
+}
+
+.notification__error {
+  background: rgba(250, 134, 134, 0.6);
+  box-shadow: 0px 4px 40px 0px rgba(250, 35, 35, 0.6);
 }

@@ -7,13 +7,13 @@
 
   &__container {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding: 150px 0;
     background-image: url("/img/header-hero.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top 30% left 50%;
+    background-position: top 30%;
   }
 }
 
