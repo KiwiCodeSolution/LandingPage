@@ -40,7 +40,7 @@
 
       text-align: center;
       text-justify: auto;
-      // margin-right: 8px;
+
       border: 1px solid rgba(56, 239, 125, 0.4);
       border-radius: 50%;
     }
@@ -60,7 +60,7 @@
     &--circle {
       position: absolute;
       top: -170px;
-      right: -170px;
+      right: -140px;
       width: 550px;
       height: 550px;
 
@@ -89,6 +89,7 @@
     z-index: 5;
 
     &--lable {
+      position: relative;
       display: flex;
       flex-direction: column;
 
@@ -104,6 +105,7 @@
       border: 1px solid rgba(56, 239, 125, 0.4);
       background: #0a180f;
       outline: none;
+      color: #cdcedf;
 
       &:focus {
         border: 1px solid $green;

@@ -1,26 +1,37 @@
 const refs = {
-  openModalBtnHero: document.querySelector("[data-modal-open-hero]"),
-  openModalBtnHeader: document.querySelector("[data-modal-open-header]"),
+  openModalBtns: document.querySelectorAll("[data-modal-open]"),
+  backdrops: document.querySelectorAll(`.backdrop`),
   closeModalBtn: document.querySelector("[data-modal-close]"),
   modal: document.querySelector("[data-modal]"),
-  backdropModal: document.querySelector(`.backdrop`),
-  backdropConsultation: document.querySelector(`.notification__backdrop`),
   body: document.querySelector("body"),
   formModal: document.querySelector(".modal__form"),
   formConsultation: document.querySelector(".consultation__form"),
-  notification: document.querySelector(".notification__backdrop"),
+  notification: document.querySelector("[data-notification]"),
+  input: document.querySelectorAll("input"),
 };
 
 const { VITE_TOKEN: TOKEN, VITE_CHAT_ID: CHAT_ID } = import.meta.env;
 const API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-refs.openModalBtnHero.addEventListener("click", onOpenModal);
-refs.openModalBtnHeader.addEventListener("click", onOpenModal);
+refs.openModalBtns.forEach((el) => {
+  el.addEventListener("click", onOpenModal);
+});
+
+refs.backdrops.forEach((el) => {
+  el.addEventListener("click", onClickBackdrop);
+});
+
 refs.closeModalBtn.addEventListener("click", onCloseModal);
-refs.backdropModal.addEventListener(`click`, onClickBackdrop);
-refs.backdropConsultation.addEventListener(`click`, onCloseNotifacation);
 refs.formModal.addEventListener("submit", onSendInformation);
 refs.formConsultation.addEventListener("submit", onSendInformation);
+
+refs.input.forEach((el) => {
+  el.addEventListener("blur", () => {
+    if (el.value.length === 0) {
+      showErr(el, "This field is required!");
+    }
+  });
+});
 
 function onOpenModal() {
   refs.modal.classList.remove("is-hidden");
@@ -30,8 +41,7 @@ function onOpenModal() {
 
 function onCloseModal() {
   refs.modal.classList.add("is-hidden");
-  refs.body.classList.remove("disable-scroll");
-  window.removeEventListener("keydown", escClose);
+  onCloseNotifacation();
 }
 
 function onCloseNotifacation() {
@@ -43,12 +53,14 @@ function onCloseNotifacation() {
 function onClickBackdrop(e) {
   if (e.currentTarget === e.target) {
     onCloseModal();
+    onCloseNotifacation();
   }
 }
 
 function escClose(e) {
   if (e.code === `Escape`) {
     onCloseModal();
+    onCloseNotifacation();
   }
 }
 
@@ -58,22 +70,51 @@ function onSendInformation(e) {
     elements: { phone, email },
   } = e.currentTarget;
 
-  const message = `<b>New contact!</b> %0A<b>Phone:</b> ${phone.value} %0A<b>Email:</b> ${email.value}`;
+  if (!phone.value.length || !email.value.length) {
+    notification("error", "All fields must be filled");
+    return;
+  }
+
+  const message = `<b>New contact from Landing!</b> %0A<b>Phone:</b> ${phone.value} %0A<b>Email:</b> ${email.value}`;
 
   fetch(`${API}?chat_id=${CHAT_ID}&text=${message}&parse_mode=html`)
     .then((res) => {
-      notification();
-      refs.notification.classList.remove("is-hidden");
-      refs.body.classList.add("disable-scroll");
+      notification("success", "Contacts sent! We will contact you shortly!");
+      refs.formModal.reset();
+      refs.formConsultation.reset();
     })
-    .catch((error) => console.log("Error:", error));
-  refs.formModal.reset();
-  refs.formConsultation.reset();
+    .catch((error) => notification("error", "Oops, something happened! Please try again"));
 }
 
-function notification() {
+function notification(status, textNotification) {
+  refs.notification.classList.remove("is-hidden");
+  refs.body.classList.add("disable-scroll");
+  window.addEventListener("keydown", escClose);
+
+  document.querySelector(".notification").classList.add(`notification__${status}`);
+  document.querySelector(".notification__text").textContent = textNotification;
+
   setTimeout(() => {
     onCloseModal();
     refs.notification.classList.add("is-hidden");
   }, 3000);
+}
+
+function showErr(field, errText) {
+  if (field.nextElementSibling && field.nextElementSibling.textContent === errText) {
+    return;
+  }
+
+  const err = document.createElement("p");
+  field.after(err);
+  err.classList.add("error");
+  err.textContent = errText;
+
+  hideErr(field, err);
+}
+
+function hideErr(field, err) {
+  field.addEventListener("input", () => {
+    err.remove();
+  });
 }
