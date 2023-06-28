@@ -110,3 +110,26 @@
 address {
   font-style: normal;
 }
+
+.up__button {
+  position: absolute;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 16px;
+  bottom: 80px;
+  right: 80px;
+
+  border-radius: 100px;
+  background: linear-gradient(270deg, #2ad86c 0%, #1c7990 100%);
+
+  &--img {
+    color: $main;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 20px 0px rgba(43, 209, 195, 0.6);
+  }
+}
