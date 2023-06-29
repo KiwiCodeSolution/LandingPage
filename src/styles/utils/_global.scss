@@ -110,7 +110,10 @@ ul {
   margin-top: 8px;
   margin-bottom: 40px;
 
-  font-size: 24px;
+  font-size: 20px;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
 }
 
 .is-hidden {

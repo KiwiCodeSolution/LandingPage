@@ -2,24 +2,31 @@
   background-color: $main_bgcolor;
   position: relative;
   padding-bottom: 55px;
+  min-height: 840px;
 
   &__step {
     position: relative;
 
     &--list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
       column-gap: 0;
       justify-content: space-between;
 
-      width: 860px;
-      height: 220px;
+      min-width: 335px;
+      height: 100%;
 
       border: 0.5px solid rgba(56, 239, 125, 0.4);
+
+      @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 860px;
+      }
     }
 
     &--item {
       position: relative;
+      height: 117px;
       padding: 15px 64px 15px 15px;
       border: 0.5px solid rgba(56, 239, 125, 0.4);
       border-collapse: separate;
@@ -52,53 +59,74 @@
     }
 
     &--img {
-      position: absolute;
-      right: -140px;
-      bottom: -118px;
+      display: none;
+      @media screen and (min-width: $tablet) {
+        display: inherit;
+        position: absolute;
+        right: -140px;
+        bottom: -118px;
+      }
     }
 
     &--circle {
-      position: absolute;
-      top: -170px;
-      right: -140px;
-      width: 550px;
-      height: 550px;
+      display: none;
+      @media screen and (min-width: $tablet) {
+        display: inherit;
+        position: absolute;
+        top: -170px;
+        right: -140px;
+        width: 550px;
+        height: 550px;
 
-      opacity: 0.20000000298023224;
-      background: $bg-button-section-how;
-      border-radius: 50%;
-      filter: blur(40px);
+        opacity: 0.20000000298023224;
+        background: $bg-button-section-how;
+        border-radius: 50%;
+        filter: blur(40px);
+      }
     }
   }
 
   &__form {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     column-gap: 24px;
     justify-content: space-between;
+    min-width: 335px;
 
-    width: 900px;
+    margin-left: 0;
+    margin-top: 44px;
 
-    margin-top: 117px;
-    margin-left: auto;
-    padding: 16px 24px;
+    padding: 16px 16px 42px 16px;
     border-radius: 8px;
     border: 1px solid rgba(56, 239, 125, 0.4);
     background: #0a180f;
 
     z-index: 5;
 
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      margin-top: 117px;
+      right: 250px;
+      padding: 16px 24px;
+      width: 900px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     &--lable {
       position: relative;
       display: flex;
       flex-direction: column;
 
-      width: 290px;
+      min-width: 290px;
       margin-bottom: 5px;
+      @media screen and (min-width: $tablet) {
+        width: 290px;
+      }
     }
 
     &--input {
-      width: 280px;
+      min-width: 280px;
       height: 44px;
       padding: 9px 16px;
       border-radius: 8px;
@@ -106,6 +134,9 @@
       background: #0a180f;
       outline: none;
       color: #cdcedf;
+      @media screen and (min-width: $tablet) {
+        width: 280px;
+      }
 
       &:focus {
         border: 1px solid $green;
@@ -113,8 +144,16 @@
     }
 
     &--button {
-      margin-top: 14px;
-      margin-left: 10px;
+      position: absolute;
+      bottom: -124px;
+      left: 0;
+      width: 100%;
+
+      @media screen and (min-width: $tablet) {
+        position: static;
+        margin-top: 14px;
+        margin-left: 10px;
+      }
     }
   }
 }

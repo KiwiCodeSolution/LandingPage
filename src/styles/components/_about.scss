@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: top 50% left 50%;
   position: relative;
+  padding-bottom: 25px;
 
   &_title {
     font: bold;
@@ -115,17 +116,28 @@
   }
 
   &__company {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-row-gap: 215px;
-
     margin-top: 75px;
+    padding: 25px 0 25px 10px;
+    min-height: 640px;
+
+    &--container {
+      height: 570px;
+      background-image: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.5)), url("/img/girl.png");
+      background-size: 500px 570px;
+      background-repeat: no-repeat;
+      background-position: top 10px right 0;
+
+      @media screen and (min-width: $tablet) {
+        background-image: url("/img/girl.png");
+      }
+    }
 
     &--text {
       width: 335px;
       font-size: 20px;
       color: $gray;
       font-weight: 600;
+      margin-top: 32px;
 
       @media screen and (min-width: $tablet) {
         width: 514px;

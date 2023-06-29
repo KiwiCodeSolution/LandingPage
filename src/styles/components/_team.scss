@@ -11,6 +11,7 @@
       width: 314px;
       height: 100%;
       padding: 0 5px;
+      margin: 0 auto;
     }
 
     &--card {
@@ -21,13 +22,13 @@
 
       perspective: 1000px;
 
-      &:hover .team__list--front {
-        transform: rotateY(180deg);
-      }
+      // &:hover .team__list--front {
+      //   transform: rotateY(180deg);
+      // }
 
-      &:hover .team__list--back {
-        transform: rotateY(360deg);
-      }
+      // &:hover .team__list--back {
+      //   transform: rotateY(360deg);
+      // }
     }
 
     &--front,
@@ -68,15 +69,22 @@
     }
 
     &--img {
-      margin-bottom: 18px;
+      margin-bottom: 6px;
     }
 
     &--title {
       font-size: 32px;
       font-weight: 700;
       line-height: 1.4;
+      text-align: center;
 
       margin-bottom: 6px;
+    }
+
+    &--text {
+      text-align: center;
+      opacity: 0.6;
+      // margin-bottom: 6px;
     }
   }
 
@@ -102,11 +110,11 @@
   }
 }
 
-.team .swiper {
-  height: 600px;
-  padding-top: 50px;
+.team .swiper-pagination {
+  position: static;
 }
 
-.team .section__text {
-  margin-bottom: 0;
+.team .swiper-scrollbar-drag {
+  display: none;
+  width: 0;
 }

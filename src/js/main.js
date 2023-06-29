@@ -1,11 +1,12 @@
 // import '../../style.css'
 import "../css/main.css";
-// import "./howItWorks";
+import "./howItWorks";
 import "./numberСhange";
-// import "./swiper";
+import "./swiper";
+import "./team";
 import "./stylesNavBar";
 
-// import "./testimonials";
+import "./testimonials";
 // import "./parallax";
 // import "./modal";
 import "./menu";
