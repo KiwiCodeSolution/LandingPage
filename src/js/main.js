@@ -8,7 +8,7 @@ import "./stylesNavBar";
 
 import "./testimonials";
 // import "./parallax";
-// import "./modal";
+import "./modal";
 import "./menu";
 // import "./upDownButtons";
 
