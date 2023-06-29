@@ -1,15 +1,15 @@
 // import '../../style.css'
 import "../css/main.css";
-import "./howItWorks";
+// import "./howItWorks";
 import "./numberСhange";
-import "./swiper";
+// import "./swiper";
 import "./stylesNavBar";
 
-import "./testimonials";
-import "./parallax";
-import "./modal";
+// import "./testimonials";
+// import "./parallax";
+// import "./modal";
 import "./menu";
-import "./upDownButtons";
+// import "./upDownButtons";
 
 // import { setupCounter } from './counter.js'
 

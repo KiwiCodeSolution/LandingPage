@@ -2,9 +2,9 @@ const refs = {
   openMenuBtn: document.querySelector(".header__menu--open"),
   closeMenuBtn: document.querySelector(".header__menu--close"),
   logo: document.querySelector(".logo"),
-  navLinks: document.querySelectorAll(".nav_link"),
+  navLinks: document.querySelectorAll(".nav--mobile_link"),
   headerBtns: document.querySelector(".header_buttons"),
-  menu: document.querySelector(".nav"),
+  menu: document.querySelector(".nav--mobile"),
   body: document.querySelector("body"),
 };
 

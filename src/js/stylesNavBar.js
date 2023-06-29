@@ -17,14 +17,3 @@ jQuery(function () {
     }
   });
 });
-
-$(document).ready(function () {
-  $(window).resize(function () {
-    const windowWidth = $("body").innerWidth();
-    if (windowWidth > 780) {
-      $(".nav").removeClass("is-hidden");
-    } else {
-      $(".nav").addClass("is-hidden");
-    }
-  });
-});

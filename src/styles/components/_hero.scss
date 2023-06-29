@@ -14,34 +14,18 @@
 }
 
 .mainblock {
-  // margin-top: 100px;
-  padding: 175px 0 135px;
+  padding: 75px 0 100px;
 
-  background-image: url("/img/header-hero.png");
+  background-image: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.5)), url("/img/header-hero.png");
   background-repeat: no-repeat;
-  background-position: center;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-    background-image: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0));
-
-    @media screen and (min-width: 768px) {
-      opacity: 0;
-    }
-  }
+  background-position-y: top;
 
   @media screen and (min-width: 768px) {
-    margin-top: 50px;
-    padding: 175px 0 135px;
-    background-position: top -60% left 100%;
+    background-position: top 0 left 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url("/img/header-hero.png");
   }
 
   &_title {
@@ -49,7 +33,7 @@
     font-weight: 700;
     font-size: 34px;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
       width: 704px;
@@ -64,17 +48,18 @@
   }
 
   &_text {
-    width: 452px;
+    width: 301px;
     margin-bottom: 16px;
 
     @media screen and (min-width: 768px) {
+      width: 452px;
       font-size: 24px;
     }
   }
 
   &_indicators {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
 
     &--item {
       display: flex;
@@ -106,11 +91,14 @@
   }
 
   &_button {
-    width: 335px;
+    width: 100%;
     height: 56px;
     padding: 12px 34px;
     font-weight: 700;
     font-size: 20px;
+
+    margin: 20px 0;
+    z-index: 10;
 
     background: $bg-button;
     border-radius: 32px;
