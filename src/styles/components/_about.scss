@@ -15,8 +15,9 @@
   }
 
   &__services {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
     &::before {
       content: "";
       position: absolute;
@@ -27,6 +28,13 @@
       transform: translate(0px, 0px);
       background: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0));
     }
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     &--text-container {
       display: flex;
@@ -35,16 +43,16 @@
     }
 
     &--image-container {
-      width: 84px;
-      height: 84px;
+      width: 64px;
+      height: 64px;
 
       background: linear-gradient($main_bgcolor, $main_bgcolor) padding-box, $bg-image border-box;
-      border-radius: 50em;
+      border-radius: 50%;
       border: 10px solid transparent;
 
       position: relative;
 
-      margin-bottom: 20px;
+      margin-bottom: 14px;
 
       &::after {
         height: 1px;
@@ -61,13 +69,21 @@
 
         opacity: 0.1;
       }
+      @media screen and (min-width: $desktop) {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 20px;
+      }
     }
 
     &--item {
       width: 315px;
-      margin-right: 110px;
-      &:last-child {
-        margin-right: 0;
+
+      @media screen and (min-width: $desktop) {
+        margin-right: 110px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -99,14 +115,17 @@
     margin-top: 75px;
 
     &--text {
-      width: 514px;
+      width: 335px;
       font-size: 20px;
-
       color: $gray;
+      font-weight: 600;
+
+      @media screen and (min-width: $tablet) {
+        width: 514px;
+      }
 
       span {
         font-size: 24px;
-        font-weight: 600;
         color: $main;
       }
     }

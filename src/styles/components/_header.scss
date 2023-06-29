@@ -2,102 +2,210 @@ header {
   width: 100%;
   height: 110px;
   padding: 10px 0;
+
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 15;
 
-  &__color {
-    background-color: $main_bgcolor;
-  }
+  z-index: 15;
 }
 
 .header {
+  position: relative;
   width: 100%;
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
 
   @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
     height: 86px;
+    background: none;
   }
 
   @media screen and (min-width: 1280px) {
     height: 110px;
+    justify-content: center;
   }
-  &_button {
-    margin-left: 24px;
-    width: 180px;
-    height: 56px;
-    padding: 12px 34px;
-    font-weight: 700;
-    font-size: 20px;
 
-    background: $bg-button;
-    border-radius: 32px;
+  &_buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 
-    &:hover,
-    &:focus {
-      box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+    @media screen and (min-width: 768px) {
+      position: static;
+      height: 100%;
     }
   }
 
-  div {
-    display: flex;
-    align-items: center;
+  &_button {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inline;
+      margin-left: 24px;
+      width: 180px;
+      height: 56px;
+      padding: 12px 34px;
+      font-weight: 700;
+      font-size: 20px;
+
+      background: $bg-button;
+      border-radius: 32px;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+      }
+    }
+  }
+
+  &__menu--open,
+  &__menu--close {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #2bd180;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 20px 5px rgba(43, 209, 195, 0.6);
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu--open {
+    margin-left: 20px;
+  }
+
+  &__menu--close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
   }
 
   &__socialList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     row-gap: 16px;
     z-index: 30;
 
-    position: fixed;
-    top: 300px;
-    left: 5%;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      position: fixed;
+      top: 300px;
+      left: 5%;
+    }
 
     &-item {
       width: 34px;
       height: 34px;
-      border: 1px solid green($color: #000000);
+      margin-right: 24px;
       border-radius: 50%;
+      &:last-child {
+        margin-right: 0;
+      }
 
       &:hover,
       &:focus {
         box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
       }
+
+      @media screen and (min-width: 768px) {
+        margin-right: 0;
+      }
     }
   }
 }
 
+.logo--mobile,
 .logo {
   width: 172px;
   height: 88px;
 }
 
+.logo--mobile {
+  position: absolute;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 20;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.logo {
+  display: inline;
+}
+
 .nav {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 95vw;
+  height: 100vh;
+  background: #000;
+  padding: 132px 0;
+
+  @media screen and (min-width: 768px) {
+    background: none;
+    padding: 0;
+  }
+
   &_list {
     display: flex;
-    margin: 24px 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
     @media screen and (min-width: 768px) {
+      flex-direction: row;
       margin: 24px 0;
     }
     @media screen and (min-width: 1280px) {
       margin: 36px 0;
     }
   }
+
   &_item {
-    position: relative;
-    margin-right: 12px;
+    padding: auto;
+    margin-bottom: 20px;
+
     @media screen and (min-width: 768px) {
-      margin-right: 20px;
+      margin-right: 6px;
+      margin-bottom: 0;
     }
     @media screen and (min-width: 1280px) {
       margin-right: 40px;
+      margin-bottom: 0;
     }
 
     &:last-child {
       margin-right: 0;
+      margin-bottom: 0;
     }
 
     &:hover,
@@ -110,21 +218,23 @@ header {
   }
 
   &_link {
+    font-size: 32px;
     font-weight: 500;
-    font-size: 24px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 24px;
+    }
   }
 }
 
 .lang {
-  margin: 24px 0;
+  // margin: 36px 0;
 
-  @media screen and (min-width: 768px) {
-    margin: 24px 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin: 36px 0;
-  }
+  font-weight: 500;
 
   &:hover,
   &:focus {
