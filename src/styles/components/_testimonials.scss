@@ -11,7 +11,11 @@
   background-position: top 40px left 0;
 
   &__title {
-    margin: 0 auto;
+    margin: 20px auto;
+
+    @media screen and (min-width: $desktop) {
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -279,9 +283,8 @@
 }
 
 .testimonials__card--swiper {
+  max-width: 320px;
   @media screen and (min-width: $tablet) {
-    display: inherit;
-
     display: none;
   }
 }
