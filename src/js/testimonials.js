@@ -3,14 +3,15 @@ import datas from "../data/testimonials.json";
 const section = document.querySelector(".testimonials__list");
 const cardElement = document.querySelector(".testimonials__card");
 
-const element = datas
-  .map(
-    (data) =>
-      `<li class=testimonials__list--item${data.id}><div class=testimonials__list--imgwrapper id=${data.id} ><img src="${data.photo}" alt="${data.name}" class=testimonials__list--img${data.id} /></div></li>`
-  )
-  .join("");
-
-section.insertAdjacentHTML("afterbegin", element);
+if (section) {
+  const element = datas
+    .map(
+      (data) =>
+        `<li class=testimonials__list--item${data.id}><div><div class=testimonials__list--imgwrapper id=${data.id} ><img src="${data.photo}" alt="${data.name}" class=testimonials__list--img${data.id} /></div></div></li>`
+    )
+    .join("");
+  section.insertAdjacentHTML("afterbegin", element);
+}
 
 const imgwrapper = section.querySelectorAll(".testimonials__list--imgwrapper");
 
@@ -25,7 +26,7 @@ imgwrapper.forEach(function (wrapp) {
     <p class=testimonials__card--name >${result.name}</p>
     <p class=testimonials__card--company >${result.company}</p>
     <div class=testimonials__card--text>
-    <p >${result.text}</p></div><div class="testimonials__card--circle1"></div>
+    <p >${result.text}</p><div class="testimonials__card--circle1"></div>
       <div class="testimonials__card--circle2"></div>
       <div class="testimonials__card--circle3"></div>`;
     }

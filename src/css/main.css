@@ -1084,15 +1084,6 @@ address {
   box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
 }
 
-.team .swiper-pagination {
-  position: static;
-}
-
-.team .swiper-scrollbar-drag {
-  display: none;
-  width: 0;
-}
-
 .consultation {
   background-color: #050505;
   position: relative;
@@ -1368,7 +1359,7 @@ address {
   top: 165px;
   right: 610px;
 }
-.testimonials__card {
+.testimonials__card, .testimonials__card--swiper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1382,7 +1373,7 @@ address {
   padding: 40px;
   background: #0a180f;
 }
-.testimonials__card--imgwrapper {
+.testimonials__card--imgwrapper, .testimonials__card--swiper--imgwrapper {
   margin: 5px auto;
   width: 88px;
   height: 88px;
@@ -1390,47 +1381,47 @@ address {
   overflow: hidden;
   background: #ffffff;
 }
-.testimonials__card--img {
+.testimonials__card--img, .testimonials__card--swiper--img {
   width: 100%;
 }
-.testimonials__card--name {
+.testimonials__card--name, .testimonials__card--swiper--name {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
 }
-.testimonials__card--company {
+.testimonials__card--company, .testimonials__card--swiper--company {
   font-size: 16px;
   font-weight: 700;
   opacity: 0.8000000119;
   margin-top: 15px;
 }
-.testimonials__card--text {
+.testimonials__card--text, .testimonials__card--swiper--text {
   width: 284px;
   margin: 24px auto;
   opacity: 0.5;
   border-radius: 0;
   background: none;
 }
-.testimonials__card--circle1, .testimonials__card--circle2, .testimonials__card--circle3 {
+.testimonials__card--circle1, .testimonials__card--circle2, .testimonials__card--circle3, .testimonials__card--swiper--circle1, .testimonials__card--swiper--circle2, .testimonials__card--swiper--circle3 {
   position: absolute;
   background: #38ef7d;
   filter: blur(20px);
 }
-.testimonials__card--circle1 {
+.testimonials__card--circle1, .testimonials__card--swiper--circle1 {
   top: 14px;
   right: 16px;
   width: 16px;
   height: 16px;
   border-radius: 16px;
 }
-.testimonials__card--circle2 {
+.testimonials__card--circle2, .testimonials__card--swiper--circle2 {
   top: 377px;
   right: 32px;
   width: 20px;
   height: 20px;
   border-radius: 20px;
 }
-.testimonials__card--circle3 {
+.testimonials__card--circle3, .testimonials__card--swiper--circle3 {
   top: 148px;
   left: 12px;
   width: 10px;
@@ -1438,20 +1429,28 @@ address {
   border-radius: 10px;
   filter: blur(5px);
 }
-.testimonials__card--button__left, .testimonials__card--button__right {
+.testimonials__card--button__left, .testimonials__card--button__right, .testimonials__card--swiper--button__left, .testimonials__card--swiper--button__right {
   position: absolute;
   top: 50%;
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
-.testimonials__card--button__left {
+.testimonials__card--button__left, .testimonials__card--swiper--button__left {
   left: 0;
   background: -webkit-linear-gradient(180deg, rgb(56, 239, 125), rgb(34, 125, 148));
 }
-.testimonials__card--button__right {
+.testimonials__card--button__right, .testimonials__card--swiper--button__right {
   right: 0;
   background: -webkit-linear-gradient(0deg, rgb(56, 239, 125), rgb(34, 125, 148));
+}
+.testimonials__card {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .testimonials__card {
+    display: inherit;
+  }
 }
 
 .parallax__container {
@@ -1464,6 +1463,13 @@ address {
   left: 32px;
   width: 44px;
   height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials__card--swiper {
+    display: inherit;
+    display: none;
+  }
 }
 
 .backdrop,
