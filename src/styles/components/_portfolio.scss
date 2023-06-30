@@ -10,17 +10,21 @@
     &--circle1,
     &--circle2,
     &--circle3 {
-      position: absolute;
-      background: $bg-button-section-how;
-      border-radius: 50%;
-      filter: blur(20px);
+      display: none;
+      @media screen and (min-width: $tablet) {
+        display: inherit;
+        position: absolute;
+        background: $bg-button-section-how;
+        border-radius: 50%;
+        filter: blur(20px);
+      }
     }
     &--circle1 {
       top: -184px;
       right: -50px;
       width: 309px;
       height: 309px;
-      opacity: 0.30000001192092896;
+      opacity: 0.3;
     }
     &--circle2 {
       top: -132px;
@@ -28,7 +32,7 @@
       width: 206px;
       height: 206px;
 
-      opacity: 0.30000001192092896;
+      opacity: 0.3;
     }
     &--circle3 {
       top: -101px;
@@ -70,10 +74,4 @@
 
 .swiper-slide {
   margin: 0;
-}
-.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  background: rgba(67, 75, 75, 0.6);
 }

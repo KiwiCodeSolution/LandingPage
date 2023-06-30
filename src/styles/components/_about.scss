@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: top 50% left 50%;
   position: relative;
+  padding-bottom: 25px;
 
   &_title {
     font: bold;
@@ -15,17 +16,32 @@
   }
 
   &__services {
-    display: flex;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
 
     &::before {
       content: "";
       position: absolute;
-      top: -11%;
+      top: -7%;
       left: 0;
       width: 100%;
       height: 130px;
       transform: translate(0px, 0px);
       background: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0));
+
+      @media screen and (min-width: $tablet) {
+        top: -11%;
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      padding-left: 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     &--text-container {
@@ -35,16 +51,16 @@
     }
 
     &--image-container {
-      width: 84px;
-      height: 84px;
+      width: 64px;
+      height: 64px;
 
       background: linear-gradient($main_bgcolor, $main_bgcolor) padding-box, $bg-image border-box;
-      border-radius: 50em;
+      border-radius: 50%;
       border: 10px solid transparent;
 
       position: relative;
 
-      margin-bottom: 20px;
+      margin-bottom: 14px;
 
       &::after {
         height: 1px;
@@ -61,13 +77,21 @@
 
         opacity: 0.1;
       }
+      @media screen and (min-width: $desktop) {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 20px;
+      }
     }
 
     &--item {
       width: 315px;
-      margin-right: 110px;
-      &:last-child {
-        margin-right: 0;
+
+      @media screen and (min-width: $desktop) {
+        margin-right: 110px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -92,21 +116,35 @@
   }
 
   &__company {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-row-gap: 215px;
-
     margin-top: 75px;
+    padding: 25px 0 25px 10px;
+    min-height: 640px;
+
+    &--container {
+      height: 570px;
+      background-image: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.5)), url("/img/girl.png");
+      background-size: 500px 570px;
+      background-repeat: no-repeat;
+      background-position: top 10px right 0;
+
+      @media screen and (min-width: $tablet) {
+        background-image: url("/img/girl.png");
+      }
+    }
 
     &--text {
-      width: 514px;
+      width: 335px;
       font-size: 20px;
-
       color: $gray;
+      font-weight: 600;
+      margin-top: 32px;
+
+      @media screen and (min-width: $tablet) {
+        width: 514px;
+      }
 
       span {
         font-size: 24px;
-        font-weight: 600;
         color: $main;
       }
     }

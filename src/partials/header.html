@@ -2,6 +2,7 @@
   <div class="container">
     <div class="header">
       <img class="logo" src="/img/logo.png" alt="logo" />
+
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav_item">
@@ -17,17 +18,45 @@
             <a href="#footer" class="nav_link">Contacts</a>
           </li>
         </ul>
+
+        <div class="header__socialList">
+          <a href="#" class="header__socialList-item"><img src="/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/github-inCircle.svg" alt="icon github" /></a>
+        </div>
       </nav>
-      <div>
+
+      <nav class="nav--mobile is-hidden">
+        <img class="logo--mobile" src="/img/logo.png" alt="logo" />
+        <button type="button" class="header__menu--close"><img src="/svg/menu-close.svg" alt="" /></button>
+        <ul class="nav--mobile_list">
+          <li class="nav--mobile_item">
+            <a href="#howitworks" class="nav--mobile_link">Services</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#portfolio" class="nav--mobile_link">Portfolio</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#about" class="nav--mobile_link">About company</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#footer" class="nav--mobile_link">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="header__socialList">
+          <a href="#" class="header__socialList-item"><img src="/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
+          <a href="#" class="header__socialList-item"><img src="/svg/github-inCircle.svg" alt="icon github" /></a>
+        </div>
+      </nav>
+      <div class="header_buttons">
         <div class="lang">UA</div>
         <button type="button" class="header_button" data-modal-open>Contact us</button>
+        <button type="button" class="header__menu--open"><img src="/svg/menu-open.svg" alt="" /></button>
       </div>
-    </div>
-    <div class="header__socialList">
-      <a href="#" class="header__socialList-item"><img src="/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
-      <a href="#" class="header__socialList-item"><img src="/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
-      <a href="#" class="header__socialList-item"><img src="/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
-      <a href="#" class="header__socialList-item"><img src="/svg/github-inCircle.svg" alt="icon github" /></a>
     </div>
   </div>
 </header>

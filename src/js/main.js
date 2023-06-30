@@ -3,12 +3,14 @@ import "../css/main.css";
 import "./howItWorks";
 import "./numberСhange";
 import "./swiper";
+import "./team";
 import "./stylesNavBar";
 
 import "./testimonials";
-import "./parallax";
+// import "./parallax";
 import "./modal";
-import "./upDownButtons";
+import "./menu";
+// import "./upDownButtons";
 
 // import { setupCounter } from './counter.js'
 
