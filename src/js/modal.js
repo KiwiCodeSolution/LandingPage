@@ -8,6 +8,8 @@ const refs = {
   formConsultation: document.querySelector(".consultation__form"),
   notification: document.querySelector("[data-notification]"),
   input: document.querySelectorAll("input"),
+  upBtn: document.querySelector(".go-up"),
+  downBtn: document.querySelector(".go-down"),
 };
 
 const { VITE_TOKEN: TOKEN, VITE_CHAT_ID: CHAT_ID } = import.meta.env;
@@ -35,12 +37,16 @@ refs.input.forEach((el) => {
 
 function onOpenModal() {
   refs.modal.classList.remove("is-hidden");
+  refs.upBtn.classList.add("is-hidden");
+  refs.downBtn.classList.add("is-hidden");
   refs.body.classList.add("disable-scroll");
   window.addEventListener("keydown", escClose);
 }
 
 function onCloseModal() {
   refs.modal.classList.add("is-hidden");
+  refs.upBtn.classList.remove("is-hidden");
+  refs.downBtn.classList.remove("is-hidden");
   onCloseNotifacation();
 }
 

@@ -10,9 +10,11 @@
 
   &__container {
     display: flex;
+    max-width: 300px;
     padding-bottom: 25px;
     position: relative;
     margin-top: 24px;
+
     @media screen and (min-width: $tablet) {
       padding-bottom: 169px;
     }
@@ -21,8 +23,11 @@
   &__buttons {
     display: flex;
     flex-direction: column;
-    margin-right: 33px;
+    margin-right: 15px;
     z-index: 10;
+    @media screen and (min-width: $tablet) {
+      margin-right: 33px;
+    }
 
     &--item {
       font-size: 48px;
@@ -42,7 +47,7 @@
 
   &__list {
     position: relative;
-    width: 100%;
+    // width: 250px;
 
     min-height: 385px;
   }
@@ -50,7 +55,10 @@
   &__item {
     display: flex;
     position: relative;
-    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+    }
 
     &--title {
       font-weight: 500;
@@ -64,9 +72,8 @@
     }
 
     &--text {
-      width: 300px;
+      width: 245px;
       opacity: 0.8;
-      margin-right: 247px;
 
       @media screen and (min-width: $tablet) {
         width: 369px;
@@ -75,22 +82,30 @@
     &--img__wrapper {
       position: absolute;
       top: -340px;
-      left: 0;
+      left: -40px;
+      width: 280px;
 
       @media screen and (min-width: $tablet) {
-        position: static;
-        margin-top: -70px;
-      }
-    }
-    &--img {
-      height: 260px;
-
-      @media screen and (min-width: $tablet) {
+        top: -60px;
+        left: 485px;
         height: 380px;
+        width: 385px;
       }
       @media screen and (min-width: $desktop) {
         height: 470px;
+        width: 565px;
       }
+    }
+    &--img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__text-wrapper {
+    width: 220px;
+    @media screen and (min-width: $tablet) {
+      width: 100%;
     }
   }
 

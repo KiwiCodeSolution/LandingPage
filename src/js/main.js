@@ -10,7 +10,7 @@ import "./testimonials";
 // import "./parallax";
 import "./modal";
 import "./menu";
-// import "./upDownButtons";
+import "./upDownButtons";
 
 // import { setupCounter } from './counter.js'
 
