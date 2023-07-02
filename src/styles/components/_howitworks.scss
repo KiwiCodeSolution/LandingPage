@@ -83,22 +83,22 @@
       position: absolute;
       top: -340px;
       left: -40px;
+      width: 280px;
 
       @media screen and (min-width: $tablet) {
-        position: static;
-        margin-top: -70px;
-      }
-    }
-    &--img {
-      height: 260px;
-      width: 280px;
-      @media screen and (min-width: $tablet) {
+        top: -60px;
+        left: 485px;
         height: 380px;
-        width: 100%;
+        width: 385px;
       }
       @media screen and (min-width: $desktop) {
         height: 470px;
+        width: 565px;
       }
+    }
+    &--img {
+      height: 100%;
+      width: 100%;
     }
   }
 

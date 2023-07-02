@@ -11,7 +11,7 @@
   transition-property: backdrop-filter;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 20;
+  z-index: 50;
 }
 
 .modal {
@@ -20,21 +20,31 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 800px;
-  height: 540px;
+  width: 300px;
+  height: 615px;
 
   padding: 0 0 0 10px;
   display: flex;
 
-  border-radius: 16px;
+  border-radius: 24px;
   background: #050505;
-  background-image: url("/img/modal.png");
-  box-shadow: 0px 4px 40px 0px rgba(56, 239, 125, 0.6);
+
+  @media screen and (min-width: $tablet) {
+    width: 800px;
+    height: 540px;
+    border-radius: 16px;
+    background-image: url("/img/modal.png");
+    box-shadow: 0px 4px 40px 0px rgba(56, 239, 125, 0.6);
+  }
 
   &__img {
-    margin-top: 40px;
-    width: 312.46px;
-    height: 500px;
+    display: none;
+    @media screen and (min-width: $tablet) {
+      display: inherit;
+      margin-top: 40px;
+      width: 312.46px;
+      height: 500px;
+    }
   }
 
   &__container {
@@ -111,17 +121,22 @@
   }
 
   &__circle {
-    position: absolute;
-    object-fit: cover;
-    top: 270px;
-    left: 263px;
-    width: 190px;
-    height: 170px;
-    opacity: 0.20000000298023224;
-    background: $bg-button-section-how;
+    display: none;
+    @media screen and (min-width: $tablet) {
+      display: inherit;
 
-    border-radius: 50%;
-    filter: blur(40px);
+      position: absolute;
+      object-fit: cover;
+      top: 270px;
+      left: 263px;
+      width: 190px;
+      height: 170px;
+      opacity: 0.2;
+      background: $bg-button-section-how;
+
+      border-radius: 50%;
+      filter: blur(40px);
+    }
   }
 }
 .error {
