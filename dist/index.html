@@ -12,14 +12,15 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Poppins&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KiwiCodeSolution</title>
-    <script type="module" crossorigin src="/LandingPage/assets/index-6a077b4b.js"></script>
-    <link rel="stylesheet" href="/LandingPage/assets/index-2fbdb614.css">
+    <script type="module" crossorigin src="/LandingPage/assets/index-aea81833.js"></script>
+    <link rel="stylesheet" href="/LandingPage/assets/index-94bf8bcb.css">
   </head>
 
   <body>
@@ -27,6 +28,7 @@
   <div class="container">
     <div class="header">
       <img class="logo" src="/LandingPage/img/logo.png" alt="logo" />
+
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav_item">
@@ -42,21 +44,49 @@
             <a href="#footer" class="nav_link">Contacts</a>
           </li>
         </ul>
+
+        <div class="header__socialList">
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+        </div>
       </nav>
-      <div>
+
+      <nav class="nav--mobile is-hidden">
+        <img class="logo--mobile" src="/LandingPage/img/logo.png" alt="logo" />
+        <button type="button" class="header__menu--close"><img src="/LandingPage/svg/menu-close.svg" alt="close" /></button>
+        <ul class="nav--mobile_list">
+          <li class="nav--mobile_item">
+            <a href="#howitworks" class="nav--mobile_link">Services</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#portfolio" class="nav--mobile_link">Portfolio</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#about" class="nav--mobile_link">About company</a>
+          </li>
+          <li class="nav--mobile_item">
+            <a href="#footer" class="nav--mobile_link">Contacts</a>
+          </li>
+        </ul>
+
+        <div class="header__socialList">
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
+          <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+        </div>
+      </nav>
+      <div class="header_buttons">
         <div class="lang">UA</div>
-        <button type="button" class="header_button" data-modal-open-header>Contact us</button>
+        <button type="button" class="header_button" data-modal-open>Contact us</button>
+        <button type="button" class="header__menu--open"><img src="/LandingPage/svg/menu-open.svg" alt="" /></button>
       </div>
-    </div>
-    <div class="header__socialList">
-      <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram" /></a>
-      <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram" /></a>
-      <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn" /></a>
-      <a href="#" class="header__socialList-item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
     </div>
   </div>
 </header>
- <section class="hero">
+ <section class="hero" id="hero">
   <div class="hero__container">
     <div class="container">
       <div class="mainblock">
@@ -71,7 +101,7 @@
           <li class="mainblock_indicators--item"><span class="mainblock_indicators--number"></span>Happy Clients</li>
           <li class="mainblock_indicators--item"><span class="mainblock_indicators--number"></span>Talents</li>
         </ul>
-        <button type="button" class="mainblock_button" data-modal-open-hero>Get Started</button>
+        <button type="button" class="mainblock_button" data-modal-open>Get Started</button>
       </div>
     </div>
   </div>
@@ -121,9 +151,9 @@
       </li>
     </ul>
 
-    <ul class="about__company">
-      <li>
+    <div class="about__company">
         <h2 class="title">About company</h2>
+        <div class="about__company--container">
         <p class="about__company--text">
           <span>KiWiCode Solution</span>
           is an innovative IT company that provides comprehensive solutions in UI/UX design, desktop application
@@ -136,9 +166,8 @@
           ensure the success of its clients in the business sphere. They also provide ongoing support and technical
           assistance to their clients even after completing the project.
         </p>
-      </li>
-      <li><img src="/LandingPage/img/girl.png"  class="about__company--img"/></li>
-    </ul>
+     </div>
+    </div>
   </div>
 </section>
  <section class="howitworks" id="howitworks">
@@ -146,99 +175,69 @@
     <h2 class="title">How it works</h2>
     <div class="howitworks__container">
       <div class="howitworks__buttons">
-        <button id="1" class="howitworks__buttons--item active" type="button">
-          1
-        </button>
-        <button id="2" class="howitworks__buttons--item" type="button">
-          2
-        </button>
-        <button id="3" class="howitworks__buttons--item" type="button">
-          3
-        </button>
-        <button id="4" class="howitworks__buttons--item" type="button">
-          4
-        </button>
+        <button id="1" class="howitworks__buttons--item active" type="button">1</button>
+        <button id="2" class="howitworks__buttons--item" type="button">2</button>
+        <button id="3" class="howitworks__buttons--item" type="button">3</button>
+        <button id="4" class="howitworks__buttons--item" type="button">4</button>
       </div>
       <ul class="howitworks__list">
         <li class="howitworks__item">
           <div class="howitworks__text-wrapper">
             <span class="howitworks__item--title">DESIGN</span>
             <p class="howitworks__item--text">
-              This is the starting point and the most important part because it
-              helps to visualize the whole future website and all its features.
-              Everything can be thought over to the smallest detail of how
-              everything will be working, the website logic, and the final
-              structure. Hence, this is the best way to understand what do you
-              want to get, and you will be able to control every corner of the
-              development, which means not a single little thing will go
-              unnoticed.
+              This is the starting point and the most important part because it helps to visualize the whole future
+              website and all its features. Everything can be thought over to the smallest detail of how everything will
+              be working, the website logic, and the final structure. Hence, this is the best way to understand what do
+              you want to get, and you will be able to control every corner of the development, which means not a single
+              little thing will go unnoticed.
             </p>
           </div>
-
-          <img
-            src="/LandingPage/img/how-works-1.png"
-            alt="image how it works"
-            class="howitworks__item--img"
-          />
+          <div class="howitworks__item--img__wrapper">
+            <img src="/LandingPage/img/how-works-1.png" alt="image how it works" class="howitworks__item--img" />
+          </div>
         </li>
         <li class="howitworks__item is-hidden">
           <div>
             <span class="howitworks__item--title">HTML CODING</span>
             <p class="howitworks__item--text">
-              This step is needed to see how your website is working without
-              adding backend logic. It displays to us how the animations work
-              and shows all the visual issues. We test adaptability and
-              appearance for different devices. HTML coding not only a technical
-              part but a visualization of your thoughts and ideas on a working
+              This step is needed to see how your website is working without adding backend logic. It displays to us how
+              the animations work and shows all the visual issues. We test adaptability and appearance for different
+              devices. HTML coding not only a technical part but a visualization of your thoughts and ideas on a working
               website.
             </p>
           </div>
-
-          <img
-            src="/LandingPage/img/how-works-2.png"
-            alt="image how it works"
-            class="howitworks__item--img"
-          />
+          <div class="howitworks__item--img__wrapper">
+            <img src="/LandingPage/img/how-works-2.png" alt="image how it works" class="howitworks__item--img" />
+          </div>
         </li>
         <li class="howitworks__item is-hidden">
           <div>
             <span class="howitworks__item--title">BACK-END CODING</span>
             <p class="howitworks__item--text">
-              The back-end is the inner world of your site. Automation, the
-              ability to edit and manage your site yourself. All this can be
-              done for your convenience at this stage. Want to change a picture
-              or add a new post? You don’t need to look for developers for this,
-              now you can do everything yourself. Moreover, exist many
-              comfortable plugins for every case, like SEO plugin where just a
-              few clicks can bring your site up, in search. And the most
-              important part that a well-written back-end makes your site work
-              quickly and efficiently.
+              The back-end is the inner world of your site. Automation, the ability to edit and manage your site
+              yourself. All this can be done for your convenience at this stage. Want to change a picture or add a new
+              post? You don’t need to look for developers for this, now you can do everything yourself. Moreover, exist
+              many comfortable plugins for every case, like SEO plugin where just a few clicks can bring your site up,
+              in search. And the most important part that a well-written back-end makes your site work quickly and
+              efficiently.
             </p>
           </div>
-
-          <img
-            src="/LandingPage/img/how-works-3.png"
-            alt="image how it works"
-            class="howitworks__item--img"
-          />
+          <div class="howitworks__item--img__wrapper">
+            <img src="/LandingPage/img/how-works-3.png" alt="image how it works" class="howitworks__item--img" />
+          </div>
         </li>
         <li class="howitworks__item is-hidden">
           <div>
             <span class="howitworks__item--title">START YOUR PROJECT</span>
             <p class="howitworks__item--text">
-              Everything is ready, we did it the way you want, and now we can
-              transfer the site to your hosting.
-              <br /><br />The business is working and developing, you have an
-              excellent website that fully displays all your capabilities and
-              takes you to a completely new level.
+              Everything is ready, we did it the way you want, and now we can transfer the site to your hosting.
+              <br /><br />The business is working and developing, you have an excellent website that fully displays all
+              your capabilities and takes you to a completely new level.
             </p>
           </div>
-
-          <img
-            src="/LandingPage/img/how-works-4.png"
-            alt="image how it works"
-            class="howitworks__item--img"
-          />
+          <div class="howitworks__item--img__wrapper">
+            <img src="/LandingPage/img/how-works-4.png" alt="image how it works" class="howitworks__item--img" />
+          </div>
         </li>
       </ul>
       <div class="howitworks--circle1"></div>
@@ -249,9 +248,7 @@
  <section class="portfolio" id="portfolio">
   <div class="container">
     <h2 class="title">Portfolio</h2>
-    <p class="section__text">
-      We present examples of work that has already been implemented by our team.
-    </p>
+    <p class="section__text">We present examples of work that has already been implemented by our team.</p>
     <div class="portfolio__container">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -279,16 +276,13 @@
           <div class="swiper-slide">
             <img src="/LandingPage/img/portfolio/portfolio_8.jpg" class="swiper-img" />
           </div>
-          ...
         </div>
-        <!-- If we need pagination -->
+
         <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
-        <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       </div>
       <div class="portfolio__container--circle1"></div>
@@ -328,7 +322,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Artem</span>
+            <p class="team__list--title">Artem</p>
             <p class="team__list--text">Designer and researcher</p>
           </div>
         </div>
@@ -356,7 +350,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Aleksandra</span>
+            <p class="team__list--title">Aleksandra</p>
             <p class="team__list--text">Designer</p>
           </div>
         </div>
@@ -384,7 +378,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Sander</span>
+            <p class="team__list--title">Sander</p>
             <p class="team__list--text">Teamlead</p>
           </div>
         </div>
@@ -412,7 +406,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Aleksandr</span>
+            <p class="team__list--title">Aleksandr</p>
             <p class="team__list--text">Fullstack Developer</p>
           </div>
         </div>
@@ -440,7 +434,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Oleksii Tolmachov</span>
+            <p class="team__list--title">Oleksii Tolmachov</p>
             <p class="team__list--text">DevOps and back-end</p>
           </div>
         </div>
@@ -468,7 +462,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Evhenija</span>
+            <p class="team__list--title">Evhenija</p>
             <p class="team__list--text">Fullstack Developer</p>
           </div>
         </div>
@@ -495,7 +489,7 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Name</span>
+            <p class="team__list--title">Name</p>
             <p class="team__list--text">Some text about our colleague and what a wonderful specialist</p>
           </div>
         </div>
@@ -522,19 +516,17 @@
                 </div>
               </div>
             </div>
-            <span class="team__list--title">Name</span>
+            <p class="team__list--title">Name</p>
             <p class="team__list--text">Some text about our colleague and what a wonderful specialist</p>
           </div>
         </div>
       </div>
-      <!-- If we need pagination -->
+
       <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
       <div class="swiper-scrollbar"></div>
     </div>
   </div>
@@ -549,79 +541,162 @@
           <div class="consultation__step--number">1</div>
           <span class="consultation__step--title">Consultation</span>
 
-          <p class="consultation__step--text">
-            Get detailed consultation from manager and expert for your area
-          </p>
+          <p class="consultation__step--text">Get detailed consultation from manager and expert for your area</p>
         </li>
         <li class="consultation__step--item">
           <span class="consultation__step--number">2</span>
           <span class="consultation__step--title">Define tasks</span>
 
-          <p class="consultation__step--text">
-            Define tasks, goals, business needs and project concept
-          </p>
+          <p class="consultation__step--text">Define tasks, goals, business needs and project concept</p>
         </li>
         <li class="consultation__step--item">
           <span class="consultation__step--number">3</span>
           <span class="consultation__step--title">Short overview</span>
 
-          <p class="consultation__step--text">
-            Short overview of KiWiCode Solution portfolio and best practice
-          </p>
+          <p class="consultation__step--text">Short overview of KiWiCode Solution portfolio and best practice</p>
         </li>
         <li class="consultation__step--item">
           <span class="consultation__step--number">4</span>
           <span class="consultation__step--title">Determine the scope</span>
 
-          <p class="consultation__step--text">
-            Determine the scope, boundaries of the project and expectations
-          </p>
+          <p class="consultation__step--text">Determine the scope, boundaries of the project and expectations</p>
         </li>
       </ul>
 
       <div class="consultation__step--circle"></div>
       <img src="/LandingPage/img/girl-1.png" alt="girl" class="consultation__step--img" />
     </div>
-    <form
-      name="consultation__form"
-      autocomplete="on"
-      class="consultation__form"
-    >
+    <form name="consultation__form" autocomplete="on" class="consultation__form" data-form>
       <label class="consultation__form--lable" for="user_phone">
         Phone
-        <input
-          type="phone"
-          name="phone"
-          class="consultation__form--input"
-          id="user_phone"
-          placeholder="Your phone"
+        <input type="phone" name="phone" class="consultation__form--input" id="user_phone" placeholder="Your phone"
       /></label>
 
       <label class="consultation__form--lable" for="user_email">
         Email
-        <input
-          type="email"
-          name="email"
-          class="consultation__form--input"
-          id="user_email"
-          placeholder="Your email"
+        <input type="email" name="email" class="consultation__form--input" id="user_email" placeholder="Your email"
       /></label>
 
-      <button type="submit" class="mainblock_button consultation__form--button">
-        Get Started
-      </button>
+      <button type="submit" class="mainblock_button consultation__form--button">Get Started</button>
     </form>
   </div>
 </section>
  <section class="testimonials">
   <div class="container">
     <h2 class="title testimonials__title">Testimonials</h2>
-    <div class="parallax__container"><ul class="testimonials__list"></ul></div>
+    <div class="parallax__container">
+      <ul class="testimonials__list"></ul>
+    </div>
 
-    <div class="testimonials__card">
+    <div class="testimonials__card"></div>
+
+    <div class="testimonials__card--swiper swiper">
+      <img src="/LandingPage/img/quote-up.png" alt="quote-up" class="quote-up" />
       <div class="testimonials__card--circle1"></div>
       <div class="testimonials__card--circle2"></div>
       <div class="testimonials__card--circle3"></div>
+      <div class="swiper-wrapper">
+        <div class="testimonials__swiper swiper-slide">
+          <div class="testimonials__card--imgwrapper">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+              alt="Michael Dam"
+              class="testimonials__card--img swiper-img"
+            />
+          </div>
+          <p class="testimonials__card--name">Michael Dam</p>
+          <p class="testimonials__card--company">company 8</p>
+          <div class="testimonials__card--text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
+              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
+              consequatur nostrum soluta
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__swiper swiper-slide">
+          <div class="testimonials__card--imgwrapper">
+            <img
+              src="https://images.unsplash.com/photo-1484515991647-c5760fcecfc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80"
+              alt="Mohammad Faruque"
+              class="testimonials__card--img"
+            />
+          </div>
+
+          <p class="testimonials__card--name">Mohammad Faruque</p>
+          <p class="testimonials__card--company">company 1</p>
+          <div class="testimonials__card--text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
+              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
+              consequatur nostrum soluta
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__swiper swiper-slide">
+          <div class="testimonials__card--imgwrapper">
+            <img
+              src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+              alt="Joshua Rondeau"
+              class="testimonials__card--img swiper-img"
+            />
+          </div>
+          <p class="testimonials__card--name">Joshua Rondeau</p>
+          <p class="testimonials__card--company">company 5</p>
+          <div class="testimonials__card--text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
+              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
+              consequatur nostrum soluta
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__swiper swiper-slide">
+          <div class="testimonials__card--imgwrapper">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+              alt="Joseph Gonzalez"
+              class="testimonials__card--img swiper-img"
+            />
+          </div>
+          <p class="testimonials__card--name">Joseph Gonzalez</p>
+          <p class="testimonials__card--company">company 3</p>
+          <div class="testimonials__card--text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
+              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
+              consequatur nostrum soluta
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__swiper swiper-slide">
+          <div class="testimonials__card--imgwrapper">
+            <img
+              src="https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80"
+              alt="Mubariz Mehdizade"
+              class="testimonials__card--img swiper-img"
+            />
+          </div>
+
+          <p class="testimonials__card--name">Mubariz Mehdizade</p>
+          <p class="testimonials__card--company">company 4</p>
+
+          <div class="testimonials__card--text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
+              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
+              consequatur nostrum soluta
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
@@ -668,6 +743,12 @@
       </li>
     </ul>
   </div>
+  <div class="go-up" title="Up" id="ToTop">
+    <img src="/LandingPage/svg/up_arrow.svg" alt="" />
+  </div>
+  <div class="go-down" title="Down" id="OnBottom">
+    <img src="/LandingPage/svg/down_arrow.svg" alt="" />
+  </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
@@ -675,25 +756,30 @@
 
     <div class="modal__container">
       <div class="modal__circle"></div>
-      <button class="modal--close" data-modal-close><img src="/LandingPage/assets/close-1d9ba4de.svg" alt="" /></button>
+      <button class="modal--close" data-modal-close><img src="/LandingPage/svg/menu-close.svg" alt="" /></button>
 
       <h4 class="modal__title">Consultation of the area expert</h4>
       <p class="modal__text">More than 4+ ears of experience that helps build effective process.</p>
-      <form name="modal__form" autocomplete="on" class="modal__form">
-        <label class="modal__form--lable" for="user_phone"> Phone</label>
-        <input type="phone" name="phone" class="modal__form--input" id="user_phone" placeholder="Your phone" />
+      <form name="modal__form" autocomplete="on" class="modal__form" data-form>
+        <label class="modal__form--lable" for="user_phone">
+          Phone
+          <input type="phone" name="phone" class="modal__form--input" id="user_phone" placeholder="Your phone" required
+        /></label>
 
-        <label class="modal__form--lable" for="user_email"> Email</label>
-        <input type="email" name="email" class="modal__form--input" id="user_email" placeholder="Your email" />
+        <label class="modal__form--lable" for="user_email">
+          Email
+          <input type="email" name="email" class="modal__form--input" id="user_email" placeholder="Your email" required
+        /></label>
 
         <button type="submit" class="mainblock_button modal__form--button">Contact us</button>
       </form>
     </div>
   </div>
-
 </div>
-<div class="notification__backdrop is-hidden">
-  <div class="notification"><p class="notification__text">Contacts sent! We will contact you shortly!</p></div>
+<div class="backdrop is-hidden" data-notification>
+  <div class="notification">
+    <p class="notification__text"></p>
+  </div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
