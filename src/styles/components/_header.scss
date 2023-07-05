@@ -159,6 +159,31 @@ header {
       }
     }
   }
+
+  &__language {
+    &--group {
+      display: flex;
+      gap: 10px;
+
+      @media screen and (min-width: 1280px) {
+        font-size: 24px;
+      }
+    }
+
+    &--button {
+      background: $main_bgcolor;
+      cursor: pointer;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        background: $bg-title;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
 }
 
 .logo--mobile,
@@ -226,7 +251,6 @@ header {
     }
 
     &_link {
-      font-size: 16px;
       font-weight: 500;
 
       @media screen and (min-width: 1280px) {
@@ -290,5 +314,42 @@ header {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.first--language {
+  &::after {
+    margin-left: 8px;
+    margin-bottom: -4px;
+    height: 27px;
+    width: 2px;
+    display: inline-block;
+
+    content: "";
+
+    background: $main;
+    border-radius: 1px;
+    opacity: 0.5;
+  }
+}
+
+.active-language {
+  background: $bg-title;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::before {
+    position: absolute;
+    bottom: -4px;
+    left: 1px;
+    height: 3px;
+    width: 30px;
+    display: inline-block;
+
+    content: "";
+
+    background: $green;
+    border-radius: 1px;
+    opacity: 0.5;
   }
 }

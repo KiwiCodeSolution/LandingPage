@@ -1,11 +1,12 @@
 .portfolio {
-  height: 600px;
+  min-height: 600px;
   background-color: $main_bgcolor;
   position: relative;
-  padding: 36px 0;
+  padding: 36px 40px;
 
   &__container {
     position: relative;
+    padding-bottom: 25px;
 
     &--circle1,
     &--circle2,
@@ -47,25 +48,51 @@
   width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  color: $main;
+.portfolio__container .swiper {
+  padding-bottom: 32px;
 }
 
-.swiper-button-next {
+.button-next,
+.button-prev {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: inherit;
+    width: 54px;
+    height: 54px;
+    padding: 16px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 27px;
+    z-index: 5;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+    }
+  }
+}
+
+.portfolio__container .swiper-pagination {
+  position: static;
+  margin: 30px 0 10px 975px;
+  padding: 0 30px;
+  width: 240px;
+  // background: $main;
+}
+
+.button-prev-img,
+.button-next-img {
+  width: 30px;
+  height: 30px;
+}
+
+.button-next {
   background: $bg-button-section-how;
+  right: 20px;
 }
 
-.swiper-button-prev {
+.button-prev {
   background: -webkit-linear-gradient(180deg, rgba(56, 239, 125, 1), rgba(34, 125, 148, 1));
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-variant: $main;
+  right: 230px;
 }
 
 .swiper-pagination-bullet-active {

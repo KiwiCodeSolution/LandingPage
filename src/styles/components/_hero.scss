@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
 
   background-color: $main_bgcolor;
 
@@ -24,11 +24,12 @@
   @media screen and (min-width: $tablet) {
     padding: 40px 0 100px;
     background-position: top 0 left 100%;
-    background-size: 50%;
+    background-size: 50% 100%;
   }
 
   @media screen and (min-width: $desktop) {
     background-image: url("/img/header-hero.png");
+    background-position-y: 40px;
   }
 
   &_title {
