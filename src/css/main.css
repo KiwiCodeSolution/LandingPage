@@ -627,7 +627,7 @@ address {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
   background-color: #050505;
 }
 .hero__container {
@@ -716,7 +716,7 @@ address {
   padding: 12px 34px;
   font-weight: 700;
   font-size: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
   z-index: 10;
   background: linear-gradient(180deg, #38ef7d 0%, #227d94 100%);
   border-radius: 32px;
@@ -1444,17 +1444,38 @@ address {
     box-shadow: 0px 0px 15px 0px rgba(43, 209, 195, 0.8);
   }
 }
+.testimonials__list--item1, .testimonials__list--item10, .testimonials__list--item14 {
+  animation: 5s show ease;
+  transition: transform 0.25s;
+}
 .testimonials__list--item1 div, .testimonials__list--item10 div, .testimonials__list--item14 div {
   width: 88px;
   height: 88px;
+}
+.testimonials__list--item1:hover, .testimonials__list--item10:hover, .testimonials__list--item14:hover {
+  transform: scale(1.1);
+}
+.testimonials__list--item2, .testimonials__list--item6, .testimonials__list--item8, .testimonials__list--item15, .testimonials__list--item17, .testimonials__list--item18 {
+  animation: 5s show ease;
+  transition: transform 0.25s;
 }
 .testimonials__list--item2 div, .testimonials__list--item6 div, .testimonials__list--item8 div, .testimonials__list--item15 div, .testimonials__list--item17 div, .testimonials__list--item18 div {
   width: 64px;
   height: 64px;
 }
+.testimonials__list--item2:hover, .testimonials__list--item6:hover, .testimonials__list--item8:hover, .testimonials__list--item15:hover, .testimonials__list--item17:hover, .testimonials__list--item18:hover {
+  transform: scale(1.1);
+}
+.testimonials__list--item3, .testimonials__list--item4, .testimonials__list--item5, .testimonials__list--item7, .testimonials__list--item9, .testimonials__list--item11, .testimonials__list--item12, .testimonials__list--item13, .testimonials__list--item16 {
+  animation: 5s show ease;
+  transition: transform 0.25s;
+}
 .testimonials__list--item3 div, .testimonials__list--item4 div, .testimonials__list--item5 div, .testimonials__list--item7 div, .testimonials__list--item9 div, .testimonials__list--item11 div, .testimonials__list--item12 div, .testimonials__list--item13 div, .testimonials__list--item16 div {
   width: 44px;
   height: 44px;
+}
+.testimonials__list--item3:hover, .testimonials__list--item4:hover, .testimonials__list--item5:hover, .testimonials__list--item7:hover, .testimonials__list--item9:hover, .testimonials__list--item11:hover, .testimonials__list--item12:hover, .testimonials__list--item13:hover, .testimonials__list--item16:hover {
+  transform: scale(1.1);
 }
 .testimonials__list--item1 {
   top: 213px;
@@ -1643,6 +1664,14 @@ address {
   }
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .backdrop,
 .notification__backdrop {
   position: fixed;

@@ -1,42 +1,39 @@
-// const refs = {
-//   uaBtns: document.querySelector("[data-language-ua]"),
-//   enBtns: document.querySelector("[data-language-en]"),
-// };
+import languagesArray from "./languagesArray";
 
-// refs.uaBtns.addEventListener("click", changeURLLanguage);
+const refs = {
+  uaBtns: document.querySelector("[data-language-ua]"),
+  enBtns: document.querySelector("[data-language-en]"),
+  btns: document.querySelectorAll(".header__language--button"),
+};
 
-// refs.enBtns.addEventListener("click", changeURLLanguage);
+const languages = ["en", "ua"];
 
-// function toogleLanguage(e) {
-//   refs.uaBtns.classList.toggle("active-language");
-//   refs.enBtns.classList.toggle("active-language");
-//   console.log(document.querySelector(".active-language").value);
-// }
+refs.btns.forEach((el) => {
+  el.addEventListener("click", () => {
+    location.href = window.location.pathname + "#" + el.value;
+    location.reload();
+  });
+});
 
-// function changeURLLanguage() {
-//   let lang = document.querySelector(".active-language").value;
-//   location.href = window.location.pathname + "#" + lang;
-//   toogleLanguage();
-//   location.reload();
-// }
+function changeLanguage(e) {
+  let hash = window.location.hash.slice(1);
 
-// function changeLanguage() {
-//   let hash = window.location.hash;
-//     hash = hash.substr(1);
-//   console.log(hash);
-//     if (!allLang.includes(hash)) {
-//       location.href = window.location.pathname + "#en";
-//       location.reload();
-//     }
-//     select.value = hash;
-//     document.querySelector("title").innerHTML = langArr["unit"][hash];
-//   document.querySelector('.lng-chip').innerHTML = langArr['chip'][hash];
-//     for (let key in langArr) {
-//       let elem = document.querySelector(".lng-" + key);
-//       if (elem) {
-//         elem.innerHTML = langArr[key][hash];
-//       }
-//     }
-// }
+  if (!languages.includes(hash)) {
+    location.href = window.location.pathname + "#en";
+    location.reload();
+  }
 
-// changeLanguage();
+  if (hash === "ua") {
+    refs.uaBtns.classList.add("active-language");
+    refs.enBtns.classList.remove("active-language");
+  }
+  if (hash === "en") {
+    refs.uaBtns.classList.remove("active-language");
+    refs.enBtns.classList.add("active-language");
+  }
+
+  for (let key in languagesArray) {
+    document.querySelector(".lng-" + key).innerHTML = languagesArray[key][hash];
+  }
+}
+changeLanguage();
