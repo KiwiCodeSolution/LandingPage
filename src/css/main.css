@@ -281,6 +281,26 @@ header {
     margin-right: 0;
   }
 }
+.header__language--group {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (min-width: 1280px) {
+  .header__language--group {
+    font-size: 24px;
+  }
+}
+.header__language--button {
+  background: #050505;
+  cursor: pointer;
+  position: relative;
+}
+.header__language--button:hover, .header__language--button:focus {
+  background: -webkit-linear-gradient(0deg, rgb(53, 234, 126), rgb(34, 125, 148));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .logo--mobile,
 .logo {
@@ -349,7 +369,6 @@ header {
     -webkit-text-fill-color: transparent;
   }
   .nav_link {
-    font-size: 16px;
     font-weight: 500;
   }
 }
@@ -409,6 +428,37 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+.first--language::after {
+  margin-left: 8px;
+  margin-bottom: -4px;
+  height: 27px;
+  width: 2px;
+  display: inline-block;
+  content: "";
+  background: #ffffff;
+  border-radius: 1px;
+  opacity: 0.5;
+}
+
+.active-language {
+  background: -webkit-linear-gradient(0deg, rgb(53, 234, 126), rgb(34, 125, 148));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.active-language::before {
+  position: absolute;
+  bottom: -4px;
+  left: 1px;
+  height: 3px;
+  width: 30px;
+  display: inline-block;
+  content: "";
+  background: #38ef7d;
+  border-radius: 1px;
+  opacity: 0.5;
+}
+
 .footer {
   min-height: 440px;
   width: 100%;
@@ -423,6 +473,7 @@ header {
   .footer {
     padding-top: 180px;
     padding-left: 100px;
+    height: 500px;
   }
 }
 .footer::after {
@@ -535,32 +586,17 @@ address {
 
 .go-up,
 .go-down {
-  display: none;
-  position: fixed;
-  z-index: 20;
+  position: absolute;
   width: 52px;
   height: 52px;
   padding: 16px;
-  margin-bottom: 200px;
-  right: 20px;
+  right: 150px;
   border-radius: 100px;
   background: linear-gradient(270deg, #2ad86c 0%, #1c7990 100%);
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
-  .go-up,
-  .go-down {
-    right: 50px;
-    margin-bottom: 30px;
-  }
-}
-
 .go-up {
-  bottom: 75px;
-}
-
-.go-down {
-  bottom: 10px;
+  bottom: 200px;
 }
 
 .go-down:hover,
@@ -591,7 +627,7 @@ address {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
   background-color: #050505;
 }
 .hero__container {
@@ -612,12 +648,13 @@ address {
   .mainblock {
     padding: 40px 0 100px;
     background-position: top 0 left 100%;
-    background-size: 50%;
+    background-size: 50% 100%;
   }
 }
 @media screen and (min-width: 1280px) {
   .mainblock {
     background-image: url("/img/header-hero.png");
+    background-position-y: 40px;
   }
 }
 .mainblock_title {
@@ -739,17 +776,12 @@ address {
 .about__services::before {
   content: "";
   position: absolute;
-  top: -7%;
+  top: -75px;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: 80px;
   transform: translate(0px, 0px);
   background: linear-gradient(0deg, rgb(5, 5, 5), rgba(5, 5, 5, 0));
-}
-@media screen and (min-width: 768px) {
-  .about__services::before {
-    top: -11%;
-  }
 }
 @media screen and (min-width: 768px) {
   .about__services {
@@ -997,8 +1029,8 @@ address {
 @media screen and (min-width: 768px) {
   .howitworks--circle2 {
     display: inherit;
-    top: -10px;
-    right: -10px;
+    top: -50px;
+    left: 700px;
     width: 480px;
     height: 480px;
   }
@@ -1009,13 +1041,14 @@ address {
 }
 
 .portfolio {
-  height: 600px;
+  min-height: 600px;
   background-color: #050505;
   position: relative;
-  padding: 36px 0;
+  padding: 36px 40px;
 }
 .portfolio__container {
   position: relative;
+  padding-bottom: 25px;
 }
 .portfolio__container--circle1, .portfolio__container--circle2, .portfolio__container--circle3 {
   display: none;
@@ -1054,25 +1087,54 @@ address {
   width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  color: #ffffff;
+.portfolio__container .swiper {
+  padding-bottom: 32px;
 }
 
-.swiper-button-next {
+.button-next,
+.button-prev {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .button-next,
+  .button-prev {
+    display: inherit;
+    width: 54px;
+    height: 54px;
+    padding: 16px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 27px;
+    z-index: 5;
+  }
+  .button-next:hover, .button-next:focus,
+  .button-prev:hover,
+  .button-prev:focus {
+    box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+  }
+}
+
+.portfolio__container .swiper-pagination {
+  position: static;
+  margin: 30px 0 10px 975px;
+  padding: 0 30px;
+  width: 240px;
+}
+
+.button-prev-img,
+.button-next-img {
+  width: 30px;
+  height: 30px;
+}
+
+.button-next {
   background: -webkit-linear-gradient(0deg, rgb(56, 239, 125), rgb(34, 125, 148));
+  right: 20px;
 }
 
-.swiper-button-prev {
+.button-prev {
   background: -webkit-linear-gradient(180deg, rgb(56, 239, 125), rgb(34, 125, 148));
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-variant: #ffffff;
+  right: 230px;
 }
 
 .swiper-pagination-bullet-active {
@@ -1086,7 +1148,7 @@ address {
 .team {
   background-color: #050505;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 .team__list {
   position: relative;
@@ -1166,6 +1228,26 @@ address {
 }
 .team__social--item:hover, .team__social--item:focus {
   box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
+}
+
+.team__wrapper {
+  position: relative;
+}
+
+.team__wrapper .swiper {
+  padding-bottom: 25px;
+}
+
+.team .button-next,
+.team .button-prev {
+  bottom: 22px;
+}
+
+.team .swiper-pagination {
+  position: static;
+  margin: 20px 0 10px 975px;
+  padding: 0 30px;
+  width: 240px;
 }
 
 .consultation {

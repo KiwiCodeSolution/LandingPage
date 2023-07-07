@@ -135,8 +135,8 @@
   &--circle2 {
     @media screen and (min-width: $tablet) {
       display: inherit;
-      top: -10px;
-      right: -10px;
+      top: -50px;
+      left: 700px;
       width: 480px;
       height: 480px;
     }

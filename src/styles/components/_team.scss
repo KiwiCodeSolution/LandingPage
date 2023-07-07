@@ -1,7 +1,7 @@
 .team {
   background-color: $main_bgcolor;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 
   &__list {
     position: relative;
@@ -84,7 +84,6 @@
     &--text {
       text-align: center;
       opacity: 0.6;
-      // margin-bottom: 6px;
     }
   }
 
@@ -109,17 +108,23 @@
     }
   }
 }
+.team__wrapper {
+  position: relative;
+}
 
-// .team .swiper-pagination {
-//   position: static;
-// }
+.team__wrapper .swiper {
+  padding-bottom: 25px;
+}
 
-// .team .swiper-scrollbar-drag {
-//   display: none;
-//   width: 0;
-// }
+.team .button-next,
+.team .button-prev {
+  bottom: 22px;
+}
 
-// .testimonials__card + .swiper-slide {
-//   width: 100%;
-//   height: 100%;
-// }
+.team .swiper-pagination {
+  position: static;
+  margin: 20px 0 10px 975px;
+  padding: 0 30px;
+  width: 240px;
+  // background: $main;
+}

@@ -13,6 +13,7 @@
   @media screen and (min-width: 768px) {
     padding-top: 180px;
     padding-left: 100px;
+    height: 500px;
   }
 
   &::after {
@@ -139,19 +140,17 @@ address {
 
 .go-up,
 .go-down {
-  display: none;
-  position: fixed;
-  z-index: 20;
+  position: absolute;
   width: 52px;
   height: 52px;
 
   padding: 16px;
-  margin-bottom: 200px;
-  right: 20px;
+
+  right: 150px;
 
   @media screen and (min-width: 768px) {
-    right: 50px;
-    margin-bottom: 30px;
+    // margin-left: 90%;
+    // margin-bottom: 100px;
   }
 
   border-radius: 100px;
@@ -160,11 +159,11 @@ address {
   cursor: pointer;
 }
 .go-up {
-  bottom: 75px;
+  bottom: 200px;
 }
-.go-down {
-  bottom: 10px;
-}
+// .go-down {
+//   bottom: 10px;
+// }
 
 .go-down:hover,
 .go-up:hover {

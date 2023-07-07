@@ -3,6 +3,7 @@ import "../css/main.css";
 import "./howItWorks";
 import "./numberСhange";
 import "./swiper";
+// import "./language";
 import "./team";
 import "./stylesNavBar";
 

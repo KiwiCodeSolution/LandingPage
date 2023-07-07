@@ -12,7 +12,7 @@ jQuery(function () {
   $("#ToTop").click(function () {
     $("html,body").animate({ scrollTop: 0 }, "slow");
   });
-  $("#OnBottom").click(function () {
-    $("html,body").animate({ scrollTop: $(document).height() }, "slow");
-  });
+  // $("#OnBottom").click(function () {
+  //   $("html,body").animate({ scrollTop: $(document).height() }, "slow");
+  // });
 });
