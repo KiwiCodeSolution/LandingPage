@@ -1,25 +1,24 @@
-const refs = {
-  uaBtns: document.querySelector("[data-language-ua]"),
-  enBtns: document.querySelector("[data-language-en]"),
-};
+// const refs = {
+//   uaBtns: document.querySelector("[data-language-ua]"),
+//   enBtns: document.querySelector("[data-language-en]"),
+// };
 
-refs.uaBtns.addEventListener("click", changeURLLanguage);
+// refs.uaBtns.addEventListener("click", changeURLLanguage);
 
-refs.enBtns.addEventListener("click", changeURLLanguage);
+// refs.enBtns.addEventListener("click", changeURLLanguage);
 
-function toogleLanguage(e) {
-  refs.uaBtns.classList.toggle("active-language");
-  refs.enBtns.classList.toggle("active-language");
-  console.log(document.querySelector(".active-language").value);
-}
+// function toogleLanguage(e) {
+//   refs.uaBtns.classList.toggle("active-language");
+//   refs.enBtns.classList.toggle("active-language");
+//   console.log(document.querySelector(".active-language").value);
+// }
 
-function changeURLLanguage() {
-  let lang = document.querySelector(".active-language").value;
-  console.log(lang);
-  location.href = window.location.pathname + "#" + lang;
-  toogleLanguage();
-  location.reload();
-}
+// function changeURLLanguage() {
+//   let lang = document.querySelector(".active-language").value;
+//   location.href = window.location.pathname + "#" + lang;
+//   toogleLanguage();
+//   location.reload();
+// }
 
 // function changeLanguage() {
 //   let hash = window.location.hash;
