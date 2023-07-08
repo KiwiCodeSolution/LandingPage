@@ -162,7 +162,7 @@ header {
 }
 .header_buttons {
   position: absolute;
-  top: 10px;
+  top: -10px;
   right: 10px;
   height: 100px;
   display: flex;
@@ -302,8 +302,20 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-.logo--mobile,
 .logo {
+  margin-top: 5px;
+  width: 120px;
+  height: 64px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-top: 0;
+    width: 172px;
+    height: 88px;
+  }
+}
+
+.logo--mobile {
   width: 172px;
   height: 88px;
 }
@@ -473,7 +485,7 @@ header {
   .footer {
     padding-top: 180px;
     padding-left: 100px;
-    height: 500px;
+    min-height: 500px;
   }
 }
 .footer::after {
@@ -495,7 +507,7 @@ header {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .footer__menu {
     flex-direction: row;
   }
@@ -514,16 +526,16 @@ header {
     margin-right: 135px;
   }
 }
-.footer__menu--social-logo-item {
+.footer__menu--social-item {
   width: 34px;
   height: 34px;
   margin-right: 24px;
   border-radius: 50%;
 }
-.footer__menu--social-logo-item:last-child {
+.footer__menu--social-item:last-child {
   margin-right: 0;
 }
-.footer__menu--social-logo-item:hover, .footer__menu--social-logo-item:focus {
+.footer__menu--social-item:hover, .footer__menu--social-item:focus {
   box-shadow: 0px 0px 10px 0px rgba(43, 209, 195, 0.6);
 }
 .footer__menu--services {
@@ -595,8 +607,20 @@ address {
   background: linear-gradient(270deg, #2ad86c 0%, #1c7990 100%);
   cursor: pointer;
 }
+
 .go-up {
-  bottom: 200px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .go-up {
+    display: inherit;
+    bottom: 480px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .go-up {
+    bottom: 200px;
+  }
 }
 
 .go-down:hover,
@@ -638,7 +662,7 @@ address {
 }
 
 .mainblock {
-  padding: 75px 0 100px;
+  padding: 10px 0 100px;
   background-image: linear-gradient(0deg, rgb(5, 5, 5), rgba(5, 5, 5, 0.5)), url("/img/header-hero.png");
   background-repeat: no-repeat;
   background-position-y: top;
@@ -646,7 +670,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .mainblock {
-    padding: 40px 0 100px;
+    padding: 30px 0 100px;
     background-position: top 0 left 100%;
     background-size: 50% 100%;
   }
@@ -658,45 +682,56 @@ address {
   }
 }
 .mainblock_title {
-  width: 311px;
+  width: 300px;
   font-weight: 700;
   font-size: 34px;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .mainblock_title {
     width: 704px;
     height: 180px;
     font-size: 64px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 }
 .mainblock_text {
   width: 301px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .mainblock_text {
     width: 452px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .mainblock_indicators {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .mainblock_indicators {
+    margin-bottom: 40px;
+  }
 }
 .mainblock_indicators--item {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 6px;
   align-items: center;
   margin-right: 16px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
 }
 .mainblock_indicators--item:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .mainblock_indicators--item {
+    row-gap: 8px;
+    font-size: 24px;
+  }
 }
 .mainblock_indicators--number {
   font-size: 40px;
@@ -898,7 +933,7 @@ address {
   position: relative;
   padding-top: 300px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .howitworks {
     padding-top: 70px;
   }
@@ -975,16 +1010,10 @@ address {
   left: -40px;
   width: 280px;
 }
-@media screen and (min-width: 768px) {
-  .howitworks__item--img__wrapper {
-    top: -60px;
-    left: 485px;
-    height: 380px;
-    width: 385px;
-  }
-}
 @media screen and (min-width: 1280px) {
   .howitworks__item--img__wrapper {
+    top: -88px;
+    left: 488px;
     height: 470px;
     width: 565px;
   }
@@ -1027,6 +1056,15 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
+  .howitworks--circle2 {
+    display: inherit;
+    top: -39px;
+    left: 223px;
+    width: 433px;
+    height: 433px;
+  }
+}
+@media screen and (min-width: 1280px) {
   .howitworks--circle2 {
     display: inherit;
     top: -50px;
@@ -1155,22 +1193,31 @@ address {
   height: 650px;
 }
 .team__list--item {
-  width: 314px;
+  width: 268px;
   height: 100%;
   padding: 0 5px;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .team__list--item {
+    width: 314px;
+  }
+}
 .team__list--card {
   position: relative;
-  width: 300px;
-  height: 390px;
+  width: 268px;
+  height: 350px;
   margin-bottom: 16px;
-  perspective: 1000px;
+}
+@media screen and (min-width: 768px) {
+  .team__list--card {
+    width: 300px;
+    height: 390px;
+  }
 }
 .team__list--front, .team__list--back {
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   transition: 1s;
@@ -1182,9 +1229,14 @@ address {
   border-radius: 16px;
 }
 .team__list--front {
-  max-height: 387px;
+  height: 335px;
   background-color: white;
   border-radius: 16px;
+}
+@media screen and (min-width: 768px) {
+  .team__list--front {
+    height: 385px;
+  }
 }
 .team__list--back {
   padding: 20px;
@@ -1270,8 +1322,12 @@ address {
 @media screen and (min-width: 768px) {
   .consultation__step--list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 860px;
     min-width: 335px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .consultation__step--list {
+    width: 860px;
   }
 }
 .consultation__step--item {
@@ -1304,7 +1360,7 @@ address {
 .consultation__step--img {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .consultation__step--img {
     display: inherit;
     position: absolute;
@@ -1312,21 +1368,31 @@ address {
     bottom: -118px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .consultation__step--img {
+    right: -100px;
+  }
+}
 .consultation__step--circle {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .consultation__step--circle {
     display: inherit;
     position: absolute;
     top: -170px;
-    right: -140px;
+    right: -180px;
     width: 550px;
     height: 550px;
-    opacity: 0.200000003;
+    opacity: 0.2;
     background: -webkit-linear-gradient(0deg, rgb(56, 239, 125), rgb(34, 125, 148));
     border-radius: 50%;
     filter: blur(40px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .consultation__step--circle {
+    right: -50px;
   }
 }
 .consultation__form {
@@ -1346,11 +1412,24 @@ address {
 @media screen and (min-width: 768px) {
   .consultation__form {
     position: absolute;
-    margin-top: 117px;
-    right: 250px;
+    top: 400px;
     padding: 16px 24px;
+    width: 730px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .consultation__form {
+    top: 465px;
+    right: 250px;
     width: 900px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 2500px) {
+  .consultation__form {
+    right: 660px;
   }
 }
 .consultation__form--lable {
@@ -1376,7 +1455,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .consultation__form--input {
-    width: 280px;
+    width: 320px;
   }
 }
 .consultation__form--input:focus {
@@ -1389,6 +1468,12 @@ address {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
+  .consultation__form--button {
+    position: static;
+    margin: 14px auto;
+  }
+}
+@media screen and (min-width: 1280px) {
   .consultation__form--button {
     position: static;
     margin-top: 14px;
@@ -1585,13 +1670,6 @@ address {
   opacity: 0.8000000119;
   margin-top: 15px;
 }
-.testimonials__card--text, .testimonials__card--swiper--text {
-  width: 284px;
-  margin: 24px auto;
-  opacity: 0.5;
-  border-radius: 0;
-  background: none;
-}
 .testimonials__card--circle1, .testimonials__card--circle2, .testimonials__card--circle3, .testimonials__card--swiper--circle1, .testimonials__card--swiper--circle2, .testimonials__card--swiper--circle3 {
   position: absolute;
   background: #38ef7d;
@@ -1637,6 +1715,13 @@ address {
 .testimonials__card {
   display: none;
 }
+.testimonials__card--text {
+  width: 284px;
+  margin: 24px auto;
+  opacity: 0.5;
+  border-radius: 0;
+  background: none;
+}
 @media screen and (min-width: 1280px) {
   .testimonials__card {
     display: inherit;
@@ -1656,12 +1741,19 @@ address {
 }
 
 .testimonials__card--swiper {
-  max-width: 320px;
+  width: 320px;
 }
 @media screen and (min-width: 768px) {
   .testimonials__card--swiper {
     display: none;
   }
+}
+.testimonials__card--swiper--text {
+  width: 238px;
+  margin: 24px auto;
+  opacity: 0.5;
+  border-radius: 0;
+  background: none;
 }
 
 @keyframes show {
@@ -1672,6 +1764,23 @@ address {
     opacity: 1;
   }
 }
+.testimonials__container .button-next,
+.testimonials__container .button-prev {
+  display: inherit;
+  width: 54px;
+  height: 54px;
+  padding: 16px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+}
+.testimonials__container .button-next:hover, .testimonials__container .button-next:focus,
+.testimonials__container .button-prev:hover,
+.testimonials__container .button-prev:focus {
+  box-shadow: 0px 0px 20px 10px rgba(43, 209, 195, 0.6);
+}
+
 .backdrop,
 .notification__backdrop {
   position: fixed;
