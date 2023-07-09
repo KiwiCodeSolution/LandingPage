@@ -1,24 +1,15 @@
 // import '../../style.css'
 import "../css/main.css";
+import "./animations";
 import "./howItWorks";
-import "./numberСhange";
-import "./swiper";
-// import "./language";
-import "./team";
-import "./stylesNavBar";
-
-import "./testimonials";
-// import "./parallax";
-import "./modal";
+import "./language";
+import "./languagesArray";
 import "./menu";
+import "./modal";
+import "./numberСhange";
+import "./stylesNavBar";
+import "./swiper";
+import "./team";
+import "./testimonials";
 import "./upDownButtons";
-
-// import { setupCounter } from './counter.js'
-
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <h1>Hello Vite!</h1>
-//   </div>
-// `
-
-// setupCounter(document.querySelector('#counter'))
+// import "./parallax";

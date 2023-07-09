@@ -4,7 +4,7 @@
   position: relative;
   padding-top: 300px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     padding-top: 70px;
   }
 
@@ -85,13 +85,9 @@
       left: -40px;
       width: 280px;
 
-      @media screen and (min-width: $tablet) {
-        top: -60px;
-        left: 485px;
-        height: 380px;
-        width: 385px;
-      }
       @media screen and (min-width: $desktop) {
+        top: -88px;
+        left: 488px;
         height: 470px;
         width: 565px;
       }
@@ -134,6 +130,13 @@
   }
   &--circle2 {
     @media screen and (min-width: $tablet) {
+      display: inherit;
+      top: -39px;
+      left: 223px;
+      width: 433px;
+      height: 433px;
+    }
+    @media screen and (min-width: $desktop) {
       display: inherit;
       top: -50px;
       left: 700px;

@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
 
   background-color: $main_bgcolor;
 
@@ -14,7 +14,7 @@
 }
 
 .mainblock {
-  padding: 75px 0 100px;
+  padding: 10px 0 100px;
 
   background-image: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.5)), url("/img/header-hero.png");
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   background-size: 335px 426px;
 
   @media screen and (min-width: $tablet) {
-    padding: 40px 0 100px;
+    padding: 30px 0 100px;
     background-position: top 0 left 100%;
     background-size: 50% 100%;
   }
@@ -33,46 +33,55 @@
   }
 
   &_title {
-    width: 311px;
+    width: 300px;
     font-weight: 700;
     font-size: 34px;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     @media screen and (min-width: $tablet) {
       width: 704px;
       height: 180px;
       font-size: 64px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
   }
 
   &_text {
     width: 301px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     @media screen and (min-width: $tablet) {
       width: 452px;
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
   &_indicators {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
 
     &--item {
       display: flex;
       flex-direction: column;
-      row-gap: 8px;
+      row-gap: 6px;
       align-items: center;
       margin-right: 16px;
 
       font-weight: 700;
-      font-size: 24px;
+      font-size: 18px;
 
       &:last-child {
         margin-right: 0;
+      }
+
+      @media screen and (min-width: $tablet) {
+        row-gap: 8px;
+        font-size: 24px;
       }
     }
 
@@ -97,7 +106,7 @@
     font-weight: 700;
     font-size: 20px;
 
-    margin: 20px 0;
+    margin: 10px 0;
     z-index: 10;
 
     background: $bg-button;

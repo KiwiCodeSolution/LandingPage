@@ -19,8 +19,11 @@
 
       @media screen and (min-width: $tablet) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 860px;
+
         min-width: 335px;
+      }
+      @media screen and (min-width: $desktop) {
+        width: 860px;
       }
     }
 
@@ -60,28 +63,36 @@
 
     &--img {
       display: none;
-      @media screen and (min-width: $tablet) {
+      @media screen and (min-width: $desktop) {
         display: inherit;
         position: absolute;
         right: -140px;
         bottom: -118px;
       }
+
+      @media screen and (min-width: 1440px) {
+        right: -100px;
+      }
     }
 
     &--circle {
       display: none;
-      @media screen and (min-width: $tablet) {
+      @media screen and (min-width: $desktop) {
         display: inherit;
         position: absolute;
         top: -170px;
-        right: -140px;
+        right: -180px;
         width: 550px;
         height: 550px;
 
-        opacity: 0.20000000298023224;
+        opacity: 0.2;
         background: $bg-button-section-how;
         border-radius: 50%;
         filter: blur(40px);
+      }
+
+      @media screen and (min-width: 1440px) {
+        right: -50px;
       }
     }
   }
@@ -105,19 +116,29 @@
 
     @media screen and (min-width: $tablet) {
       position: absolute;
-      margin-top: 117px;
-      right: 250px;
+      top: 400px;
       padding: 16px 24px;
+      width: 730px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      top: 465px;
+      right: 250px;
       width: 900px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media screen and (min-width: 2500px) {
+      right: 660px;
     }
 
     &--lable {
       position: relative;
       display: flex;
       flex-direction: column;
-
       margin-bottom: 5px;
+
       @media screen and (min-width: $tablet) {
         width: 290px;
         min-width: 290px;
@@ -133,7 +154,11 @@
       outline: none;
       color: #cdcedf;
       @media screen and (min-width: $tablet) {
-        width: 280px;
+        width: 320px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 270px;
       }
 
       &:focus {
@@ -148,6 +173,10 @@
       width: 100%;
 
       @media screen and (min-width: $tablet) {
+        position: static;
+        margin: 14px auto;
+      }
+      @media screen and (min-width: $desktop) {
         position: static;
         margin-top: 14px;
         margin-left: 10px;
