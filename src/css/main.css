@@ -1346,7 +1346,7 @@ address {
 }
 @media screen and (min-width: 1280px) {
   .consultation__step--list {
-    width: 860px;
+    width: 745px;
   }
 }
 .consultation__step--item {
@@ -1383,7 +1383,7 @@ address {
   .consultation__step--img {
     display: inherit;
     position: absolute;
-    right: -140px;
+    left: calc(100% - 613px);
     bottom: -118px;
   }
 }
@@ -1400,7 +1400,7 @@ address {
     display: inherit;
     position: absolute;
     top: -170px;
-    right: -180px;
+    left: calc(100% - 550px);
     width: 550px;
     height: 550px;
     opacity: 0.2;
@@ -1441,7 +1441,7 @@ address {
 @media screen and (min-width: 1280px) {
   .consultation__form {
     top: 465px;
-    right: 250px;
+    left: calc(100% - 1300px);
     width: 900px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
