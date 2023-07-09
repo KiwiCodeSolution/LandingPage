@@ -829,11 +829,6 @@ address {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.about__services--text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .about__services--image-container {
   width: 64px;
   height: 64px;
@@ -861,6 +856,14 @@ address {
     height: 84px;
     margin-bottom: 20px;
   }
+}
+.about__services--text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
 .about__services--item {
   max-width: 315px;
@@ -926,6 +929,22 @@ address {
 .about__company--img {
   height: 747px;
   width: 750px;
+}
+
+.about__services--text-container.animations {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.about__company--container .about__company--text {
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+
+.about__company--container .about__company--text.animations {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .howitworks {
@@ -1456,6 +1475,11 @@ address {
 @media screen and (min-width: 768px) {
   .consultation__form--input {
     width: 320px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .consultation__form--input {
+    width: 270px;
   }
 }
 .consultation__form--input:focus {

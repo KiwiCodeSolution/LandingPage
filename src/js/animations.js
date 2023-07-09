@@ -1,4 +1,5 @@
 const animItems = document.querySelectorAll(".anim-item");
+console.log(animItems);
 
 if (animItems.length > 0) {
   window.addEventListener("scroll", animationOnScroll);
@@ -15,19 +16,19 @@ if (animItems.length > 0) {
         animPoit = window.innerHeight - window.innerHeight / animStart;
       }
 
-      if (scrollY > animItemOffset - animPoit && scrollY < animItemOffset + height) {
+      if (window.scrollY > animItemOffset - animPoit && window.scrollY < animItemOffset + height) {
         animItem.classList.add("animations");
       } else {
-        animItem.classList.remove("animations");
+        if (!animItem.classList.contains("anim-no-hide")) {
+          animItem.classList.remove("animations");
+        }
       }
     }
   }
 
   function offset(el) {
     const rect = el.getBoundingClientRect();
-    scrollLeft = window.scrollY || document.documentElement.scrollLeft;
-    scrollTop = window.scrollX || document.documentElement.scrollTop;
-    return { top: rect.top + screenTop, left: rect.left + screenLeft };
+    return { top: rect.top + window.scrollX, left: rect.left + window.scrollY };
   }
 
   setTimeout(() => {

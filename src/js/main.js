@@ -1,15 +1,15 @@
 // import '../../style.css'
 import "../css/main.css";
+import "./animations";
 import "./howItWorks";
-import "./numberСhange";
-import "./swiper";
-import "./languagesArray";
 import "./language";
-import "./team";
-import "./stylesNavBar";
-
-import "./testimonials";
-// import "./parallax";
-import "./modal";
+import "./languagesArray";
 import "./menu";
+import "./modal";
+import "./numberСhange";
+import "./stylesNavBar";
+import "./swiper";
+import "./team";
+import "./testimonials";
 import "./upDownButtons";
+// import "./parallax";
