@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KiwiCodeSolution</title>
-    <script type="module" crossorigin src="/LandingPage/assets/index-3980fc3a.js"></script>
-    <link rel="stylesheet" href="/LandingPage/assets/index-5021fd4f.css">
+    <script type="module" crossorigin src="/LandingPage/assets/index-3c056f4f.js"></script>
+    <link rel="stylesheet" href="/LandingPage/assets/index-86f2bfc9.css">
   </head>
 
   <body>
@@ -32,16 +32,16 @@
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav_item">
-            <a href="#howitworks" class="nav_link">Services</a>
+            <a href="#howitworks" class="nav_link lng-serv-menu">Services</a>
           </li>
           <li class="nav_item">
-            <a href="#portfolio" class="nav_link">Portfolio</a>
+            <a href="#portfolio" class="nav_link lng-portf-menu">Portfolio</a>
           </li>
           <li class="nav_item">
-            <a href="#about" class="nav_link">About company</a>
+            <a href="#about" class="nav_link lng-about-menu">About company</a>
           </li>
           <li class="nav_item">
-            <a href="#footer" class="nav_link">Contacts</a>
+            <a href="#footer" class="nav_link lng-cont-menu">Contacts</a>
           </li>
         </ul>
 
@@ -58,16 +58,16 @@
         <button type="button" class="header__menu--close"><img src="/LandingPage/svg/menu-close.svg" alt="close" /></button>
         <ul class="nav--mobile_list">
           <li class="nav--mobile_item">
-            <a href="#howitworks" class="nav--mobile_link">Services</a>
+            <a href="#howitworks" class="nav--mobile_link lng-serv-menu">Services</a>
           </li>
           <li class="nav--mobile_item">
-            <a href="#portfolio" class="nav--mobile_link">Portfolio</a>
+            <a href="#portfolio" class="nav--mobile_link lng-portf-menu">Portfolio</a>
           </li>
           <li class="nav--mobile_item">
-            <a href="#about" class="nav--mobile_link">About company</a>
+            <a href="#about" class="nav--mobile_link lng-about-menu">About company</a>
           </li>
           <li class="nav--mobile_item">
-            <a href="#footer" class="nav--mobile_link">Contacts</a>
+            <a href="#footer" class="nav--mobile_link lng-cont-menu">Contacts</a>
           </li>
         </ul>
 
@@ -79,9 +79,16 @@
         </div>
       </nav>
       <div class="header_buttons">
-        <div class="lang">UA</div>
-        <button type="button" class="header_button" data-modal-open>Contact us</button>
-        <button type="button" class="header__menu--open"><img src="/LandingPage/svg/menu-open.svg" alt="" /></button>
+        <div class="header__language--group">
+          <button class="header__language--button first--language active-language" data-language-ua value="ua">
+            UA
+          </button>
+          <button class="header__language--button" data-language-en value="en">EN</button>
+        </div>
+        <button type="button" class="header_button lng-had-btn" data-modal-open>Contact us</button>
+        <button type="button" class="header__menu--open">
+          <img src="/LandingPage/svg/menu-open.svg" alt="icon burger menu" />
+        </button>
       </div>
     </div>
   </div>
@@ -114,9 +121,9 @@
         <div class="about__services--image-container">
           <img src="/LandingPage/svg/pen-tool-ICO.svg" alt="icon about serviser" class="about__services--image" />
         </div>
-        <div class="about__services--text-container">
-          <span class="about__services--title">UI / UX Design</span>
-          <p class="about__services--text">
+        <div class="anim-item anim-no-hide about__services--text-container ">
+          <span class="about__services--title lng-about-design-title">UI / UX Design</span>
+          <p class="about__services--text lng-about-design-text">
             The process of developing UI/UX design for websites includes analyzing the target audience and their needs,
             creating ideas and design concepts, developing prototypes and testing them for user experience, as well as
             defining the color palette, fonts, and other design elements.
@@ -127,9 +134,9 @@
         <div class="about__services--image-container">
           <img src="/LandingPage/svg/dev-tool.svg" alt="icon about serviser" class="about__services--image" />
         </div>
-        <div class="about__services--text-container">
-          <span class="about__services--title">Desktop Application Development</span>
-          <p class="about__services--text">
+        <div class="anim-item anim-no-hide  about__services--text-container ">
+          <span class="about__services--title lng-about-development-title">Desktop Application Development</span>
+          <p class="about__services--text lng-about-development-text">
             Desktop application development is the process of creating software to run on personal computers, which are
             installed and executed without internet access, and can have various functionalities ranging from processing
             text and tables to advanced graphical capabilities and use of databases.
@@ -140,9 +147,9 @@
         <div class="about__services--image-container">
           <img src="/LandingPage/svg/trend-up.svg" alt="icon about serviser" class="about__services--image" />
         </div>
-        <div class="about__services--text-container">
-          <span class="about__services--title">Omnichannel Marketing</span>
-          <p class="about__services--text">
+        <div class="anim-item anim-no-hide  about__services--text-container ">
+          <span class="about__services--title lng-about-marketing-title">Omnichannel Marketing</span>
+          <p class="about__services--text lng-about-marketing-text">
             Omnichannel marketing is a marketing strategy that involves using various communication channels with
             customers, such as email, social media, mobile apps, SMS messages, and others, to create a seamless and
             consistent experience of interacting with a brand regardless of the customer's chosen communication channel.
@@ -152,16 +159,17 @@
     </ul>
 
     <div class="about__company">
-        <h2 class="title">About company</h2>
+        <h2 class="title lng-about-title">About company</h2>
         <div class="about__company--container">
-        <p class="about__company--text">
-          <span>KiWiCode Solution</span>
+        <p class="anim-item anim-no-hide about__company--text">
+          <span >KiWiCode Solution</span>
+
           is an innovative IT company that provides comprehensive solutions in UI/UX design, desktop application
           development, and marketing. The company has many years of experience in creating high-quality projects for
           clients worldwide, and they focus on meeting the individual needs and requirements of each client.
         </p>
       </br>
-        <p class="about__company--text">
+        <p class="anim-item anim-no-hide about__company--text">
           <span>KiWiCode Solution</span> guarantees high-quality work and uses the latest technological solutions to
           ensure the success of its clients in the business sphere. They also provide ongoing support and technical
           assistance to their clients even after completing the project.
@@ -253,38 +261,51 @@
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_1.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_1.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_2.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_2.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_3.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_3.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_4.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_4.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_5.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_5.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_6.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_6.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_7.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_7.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
           <div class="swiper-slide">
-            <img src="/LandingPage/img/portfolio/portfolio_8.jpg" class="swiper-img" />
+            <a href="#" target="_blank">
+              <img src="/LandingPage/img/portfolio/portfolio_8.jpg" class="swiper-img" alt="portfolio image"
+            /></a>
           </div>
         </div>
-
         <div class="swiper-pagination"></div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <div class="swiper-scrollbar"></div>
+        <button class="button-prev"><img src="/LandingPage/svg/left.svg" alt="" class="button-prev-img" /></button>
+        <button class="button-next"><img src="/LandingPage/svg/right.svg" alt="" class="button-next-img" /></button>
       </div>
+
       <div class="portfolio__container--circle1"></div>
       <div class="portfolio__container--circle2"></div>
       <div class="portfolio__container--circle3"></div>
@@ -297,237 +318,240 @@
     <p class="section__text">
       Our team offers a full range of layout development services to testing the finished proposal.
     </p>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Artem.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Artem</h3>
-                <p>Lead designer and researcher</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+    <div class="team__wrapper">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/team/Artem.jpg" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Artem</h3>
+                  <p>Lead designer and researcher</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
                 </div>
               </div>
+              <p class="team__list--title">Artem</p>
+              <p class="team__list--text">Designer and researcher</p>
             </div>
-            <p class="team__list--title">Artem</p>
-            <p class="team__list--text">Designer and researcher</p>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/team/Aleksandra.jpg" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Aleksandra</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Aleksandra</p>
+              <p class="team__list--text">Designer</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/team/Sander.jpg" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Sander</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Sander</p>
+              <p class="team__list--text">Teamlead</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/team/Hardin.jpg" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Aleksandr</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Aleksandr</p>
+              <p class="team__list--text">Fullstack Developer</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img
+                    src="/LandingPage/img/team/Tolmachov_cleared.jpg"
+                    alt="team member photo"
+                    class="team__list--img swiper-img"
+                  />
+                </div>
+                <div class="team__list--back">
+                  <h3>Alexey</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Oleksii Tolmachov</p>
+              <p class="team__list--text">DevOps and back-end</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/team/Poduzova.jpg" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Evhenija</h3>
+                  <p>Fullstack Developer</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Evhenija</p>
+              <p class="team__list--text">Fullstack Developer</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/no-image.png" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Name</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Name</p>
+              <p class="team__list--text">Some text about our colleague</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="team__list--item">
+              <div class="team__list--card">
+                <div class="team__list--front">
+                  <img src="/LandingPage/img/no-image.png" alt="team member photo" class="team__list--img swiper-img" />
+                </div>
+                <div class="team__list--back">
+                  <h3>Name</h3>
+                  <p>Some text about our colleague</p>
+                  <div class="team__social">
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
+                    /></a>
+                    <a href="#" class="team__social--item"
+                      ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
+                    /></a>
+                    <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
+                  </div>
+                </div>
+              </div>
+              <p class="team__list--title">Name</p>
+              <p class="team__list--text">Some text about our colleague</p>
+            </div>
           </div>
         </div>
 
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Aleksandra.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Aleksandra</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Aleksandra</p>
-            <p class="team__list--text">Designer</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Sander.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Sander</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Sander</p>
-            <p class="team__list--text">Teamlead</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Hardin.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Aleksandr</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Aleksandr</p>
-            <p class="team__list--text">Fullstack Developer</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Tolmachov_cleared.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Alexey</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Oleksii Tolmachov</p>
-            <p class="team__list--text">DevOps and back-end</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/team/Poduzova.jpg" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Evhenija</h3>
-                <p>Fullstack Developer</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Evhenija</p>
-            <p class="team__list--text">Fullstack Developer</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/no-image.png" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Name</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Name</p>
-            <p class="team__list--text">Some text about our colleague and what a wonderful specialist</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="team__list--item">
-            <div class="team__list--card">
-              <div class="team__list--front">
-                <img src="/LandingPage/img/no-image.png" alt="team member photo" class="team__list--img swiper-img" />
-              </div>
-              <div class="team__list--back">
-                <h3>Name</h3>
-                <p>Some text about our colleague and what a wonderful specialist</p>
-                <div class="team__social">
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/telegram-inCircle.svg" alt="icon telegram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/instagram-inCircle.svg" alt="icon instagram"
-                  /></a>
-                  <a href="#" class="team__social--item"
-                    ><img src="/LandingPage/svg/linkedIn-inCircle.svg" alt="icon linkedIn"
-                  /></a>
-                  <a href="#" class="team__social--item"><img src="/LandingPage/svg/github-inCircle.svg" alt="icon github" /></a>
-                </div>
-              </div>
-            </div>
-            <p class="team__list--title">Name</p>
-            <p class="team__list--text">Some text about our colleague and what a wonderful specialist</p>
-          </div>
-        </div>
+        <div class="swiper-pagination"></div>
+        <button class="button-prev"><img src="/LandingPage/svg/left.svg" alt="left icon" class="button-prev-img" /></button>
+        <button class="button-next"><img src="/LandingPage/svg/right.svg" alt="right icon" class="button-next-img" /></button>
       </div>
-
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
@@ -589,114 +613,94 @@
     </div>
 
     <div class="testimonials__card"></div>
+    <div class="testimonials__container">
+      <div class="testimonials__card--swiper swiper">
+        <img src="/LandingPage/img/quote-up.png" alt="quote-up" class="quote-up" />
+        <div class="testimonials__card--circle1"></div>
+        <div class="testimonials__card--circle2"></div>
+        <div class="testimonials__card--circle3"></div>
+        <div class="swiper-wrapper">
+          <div class="testimonials__swiper swiper-slide">
+            <div class="testimonials__card--imgwrapper">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                alt="Michael Dam"
+                class="testimonials__card--img swiper-img"
+              />
+            </div>
+            <p class="testimonials__card--name">Michael Dam</p>
+            <p class="testimonials__card--company">company 8</p>
+            <div class="testimonials__card--swiper--text">
+              here should be a review of cooperation with our company from satisfied customers
+            </div>
+          </div>
+          <div class="testimonials__swiper swiper-slide">
+            <div class="testimonials__card--imgwrapper">
+              <img
+                src="https://images.unsplash.com/photo-1484515991647-c5760fcecfc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80"
+                alt="Mohammad Faruque"
+                class="testimonials__card--img"
+              />
+            </div>
 
-    <div class="testimonials__card--swiper swiper">
-      <img src="/LandingPage/img/quote-up.png" alt="quote-up" class="quote-up" />
-      <div class="testimonials__card--circle1"></div>
-      <div class="testimonials__card--circle2"></div>
-      <div class="testimonials__card--circle3"></div>
-      <div class="swiper-wrapper">
-        <div class="testimonials__swiper swiper-slide">
-          <div class="testimonials__card--imgwrapper">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-              alt="Michael Dam"
-              class="testimonials__card--img swiper-img"
-            />
+            <p class="testimonials__card--name">Mohammad Faruque</p>
+            <p class="testimonials__card--company">company 1</p>
+            <div class="testimonials__card--swiper--text">
+              here should be a review of cooperation with our company from satisfied customers
+            </div>
           </div>
-          <p class="testimonials__card--name">Michael Dam</p>
-          <p class="testimonials__card--company">company 8</p>
-          <div class="testimonials__card--text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
-              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
-              consequatur nostrum soluta
-            </p>
+          <div class="testimonials__swiper swiper-slide">
+            <div class="testimonials__card--imgwrapper">
+              <img
+                src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                alt="Joshua Rondeau"
+                class="testimonials__card--img swiper-img"
+              />
+            </div>
+            <p class="testimonials__card--name">Joshua Rondeau</p>
+            <p class="testimonials__card--company">company 5</p>
+            <div class="testimonials__card--swiper--text">
+              here should be a review of cooperation with our company from satisfied customers
+            </div>
           </div>
-        </div>
-        <div class="testimonials__swiper swiper-slide">
-          <div class="testimonials__card--imgwrapper">
-            <img
-              src="https://images.unsplash.com/photo-1484515991647-c5760fcecfc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80"
-              alt="Mohammad Faruque"
-              class="testimonials__card--img"
-            />
+          <div class="testimonials__swiper swiper-slide">
+            <div class="testimonials__card--imgwrapper">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                alt="Joseph Gonzalez"
+                class="testimonials__card--img swiper-img"
+              />
+            </div>
+            <p class="testimonials__card--name">Joseph Gonzalez</p>
+            <p class="testimonials__card--company">company 3</p>
+            <div class="testimonials__card--swiper--text">
+              here should be a review of cooperation with our company from satisfied customers
+            </div>
           </div>
+          <div class="testimonials__swiper swiper-slide">
+            <div class="testimonials__card--imgwrapper">
+              <img
+                src="https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80"
+                alt="Mubariz Mehdizade"
+                class="testimonials__card--img swiper-img"
+              />
+            </div>
 
-          <p class="testimonials__card--name">Mohammad Faruque</p>
-          <p class="testimonials__card--company">company 1</p>
-          <div class="testimonials__card--text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
-              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
-              consequatur nostrum soluta
-            </p>
-          </div>
-        </div>
-        <div class="testimonials__swiper swiper-slide">
-          <div class="testimonials__card--imgwrapper">
-            <img
-              src="https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-              alt="Joshua Rondeau"
-              class="testimonials__card--img swiper-img"
-            />
-          </div>
-          <p class="testimonials__card--name">Joshua Rondeau</p>
-          <p class="testimonials__card--company">company 5</p>
-          <div class="testimonials__card--text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
-              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
-              consequatur nostrum soluta
-            </p>
-          </div>
-        </div>
-        <div class="testimonials__swiper swiper-slide">
-          <div class="testimonials__card--imgwrapper">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-              alt="Joseph Gonzalez"
-              class="testimonials__card--img swiper-img"
-            />
-          </div>
-          <p class="testimonials__card--name">Joseph Gonzalez</p>
-          <p class="testimonials__card--company">company 3</p>
-          <div class="testimonials__card--text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
-              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
-              consequatur nostrum soluta
-            </p>
-          </div>
-        </div>
-        <div class="testimonials__swiper swiper-slide">
-          <div class="testimonials__card--imgwrapper">
-            <img
-              src="https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80"
-              alt="Mubariz Mehdizade"
-              class="testimonials__card--img swiper-img"
-            />
-          </div>
+            <p class="testimonials__card--name">Mubariz Mehdizade</p>
+            <p class="testimonials__card--company">company 4</p>
 
-          <p class="testimonials__card--name">Mubariz Mehdizade</p>
-          <p class="testimonials__card--company">company 4</p>
-
-          <div class="testimonials__card--text">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero est asperiores, eveniet nesciunt id
-              suscipit placeat! Dolore hic libero, expedita voluptatum quibusdam maxime, ab minima voluptas fuga
-              consequatur nostrum soluta
-            </p>
+            <div class="testimonials__card--swiper--text">
+              here should be a review of cooperation with our company from satisfied customers
+            </div>
           </div>
         </div>
+
+        <div class="swiper-pagination"></div>
+        <button class="button-prev"><img src="/LandingPage/svg/left.svg" alt="" class="button-prev-img" /></button>
+        <button class="button-next"><img src="/LandingPage/svg/right.svg" alt="" class="button-next-img" /></button>
+
+        <div class="swiper-scrollbar"></div>
       </div>
-
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
@@ -742,21 +746,21 @@
         </ul>
       </li>
     </ul>
-  </div>
-  <div class="go-up" title="Up" id="ToTop">
-    <img src="/LandingPage/svg/up_arrow.svg" alt="" />
-  </div>
-  <div class="go-down" title="Down" id="OnBottom">
-    <img src="/LandingPage/svg/down_arrow.svg" alt="" />
+    <div class="go-up" title="Up" id="ToTop">
+      <img src="/LandingPage/svg/up_arrow.svg" alt="up arrow" />
+    </div>
+    <!-- <div class="go-down" title="Down" id="OnBottom">
+    <img src="/svg/down_arrow.svg" alt="down arrow" />
+  </div> -->
   </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
-    <img src="/LandingPage/img/girl-modal.png" alt="" class="modal__img" />
+    <img src="/LandingPage/img/girl-modal.png" alt="background image girl" class="modal__img" />
 
     <div class="modal__container">
       <div class="modal__circle"></div>
-      <button class="modal--close" data-modal-close><img src="/LandingPage/svg/menu-close.svg" alt="" /></button>
+      <button class="modal--close" data-modal-close><img src="/LandingPage/svg/menu-close.svg" alt="icon close menu" /></button>
 
       <h4 class="modal__title">Consultation of the area expert</h4>
       <p class="modal__text">More than 4+ ears of experience that helps build effective process.</p>
