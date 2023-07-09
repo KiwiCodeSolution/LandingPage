@@ -2,8 +2,10 @@
   position: relative;
   width: 100%;
   min-height: 90vh;
-
   background-color: $main_bgcolor;
+  // @media screen and (max-width: $tablet) {
+  //     min-height: 75vh;
+  //   }
 
   &__container {
     position: fixed;

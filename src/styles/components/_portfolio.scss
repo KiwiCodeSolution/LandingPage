@@ -3,7 +3,9 @@
   background-color: $main_bgcolor;
   position: relative;
   padding: 36px 40px;
-
+  @media screen and (max-width: $tablet) {
+      padding:0;
+    }
   &__container {
     position: relative;
     padding-bottom: 25px;

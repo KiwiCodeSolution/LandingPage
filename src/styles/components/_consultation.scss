@@ -2,8 +2,12 @@
   background-color: $main_bgcolor;
   position: relative;
   padding-bottom: 55px;
+  padding-top: 100px;
   min-height: 840px;
-
+  @media screen and (max-width: $tablet) {
+    padding-top: 25px;
+    padding-bottom: 125px;
+  }
   &__step {
     position: relative;
 

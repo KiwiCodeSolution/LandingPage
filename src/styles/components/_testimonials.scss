@@ -6,9 +6,14 @@
   padding: 68px 0 125px 0;
 
   background-image: url("/img/testimorials.png");
-  background-size: 836px cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top 40px left 0;
+  @media screen and (max-width: $tablet) {
+      margin: 0 auto;
+      padding: 68px 0 25px 0;
+      height: 610px;
+    }
 
   &__title {
     margin: 20px auto;

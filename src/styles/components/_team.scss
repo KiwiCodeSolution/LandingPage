@@ -1,7 +1,10 @@
 .team {
   background-color: $main_bgcolor;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 0;
+  @media screen and (min-width: $desktop) {
+      padding-bottom: 80;
+    }
 
   &__list {
     position: relative;
